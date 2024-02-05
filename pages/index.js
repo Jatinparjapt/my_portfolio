@@ -3,11 +3,15 @@ import { Inter } from "next/font/google";
 import Skills from "./Routes/Skills";
 import Blog from "./Routes/Blog";
 import image1 from "@/public/image1.jpeg"
+import Head from "next/head";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
  <>
+  <Head>
+        <title>Home Page</title>
+      </Head>
  <div className="container mt-20  ">
 
  <h1 className="flex  text-4xl text-slate-500  justify-center  "> Hey ! I am Jatin ,Full Stack Web Developer </h1>

@@ -1,8 +1,12 @@
 import React from 'react'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import Link from 'next/link';
+import Head from 'next/head';
 const Contect = () => (
   <>
+   <Head>
+        <title>Contact Page</title>
+      </Head>
     <section className="text-gray-600 body-font relative">
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-col text-center w-full mb-12">
@@ -26,7 +30,8 @@ const Contect = () => (
             <div className="p-2 w-full">
               <div className="">
                 <label htmlFor="message" className="leading-7 text-sm text-gray-600">Message</label>
-                <textarea id="message" name="message" className="w-full  bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out" placeholder='What would you like to share ' ></textarea>
+                <textarea id="message" name="message" className="w-full  bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out" placeholder='What would you like to share 
+                ' ></textarea>
               </div>
             </div>
             <div className="p-2 w-full">

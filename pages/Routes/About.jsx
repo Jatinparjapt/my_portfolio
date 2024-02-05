@@ -7,9 +7,13 @@ import WorkHistoryIcon from '@mui/icons-material/WorkHistory';
 import ArticleIcon from '@mui/icons-material/Article';
 import FileOpenIcon from '@mui/icons-material/FileOpen';
 import aboutMe from "@/public/aboutMe.jpg"
+import Head from 'next/head';
 const About = () => {
   return (
     <>
+     <Head>
+        <title>About Me Page</title>
+      </Head>
     <section className="text-gray-600 body-font">
   <div className="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
     <Image  width={720} height={600} className="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" alt="hero" src={aboutMe}/>

@@ -1,8 +1,11 @@
 import React from 'react'
-
+import Head from 'next/head'
 const Privacy = () => {
   return (
     <>
+    <Head>
+        <title>Privacy Policy Page</title>
+      </Head>
       <div class="flex flex-wrap -m-4 mt-20 ">
       <div class=" flex justify-center ml-20 p-4 md:w-[80%] w-full">
         <div class="h-full bg-gray-100 p-8 rounded">

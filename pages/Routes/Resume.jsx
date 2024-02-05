@@ -7,6 +7,7 @@ import GetAppIcon from '@mui/icons-material/GetApp';
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 // import resumedownload from "@/public/resumeDownload.pdf"
 import Link from "next/link";
+import Head from "next/head";
 const Resume = () => {
   const downloadFile = (event)=>{
     if(typeof window !== "undefined"){
@@ -15,6 +16,9 @@ const Resume = () => {
   }
   return (
     <>
+     <Head>
+        <title>Resume Page</title>
+      </Head>
       <div className="bg-slate-300  pb-[40rem]  ">
         <h1 className=" container text-4xl flex mt-20 justify-center">
           Resume/CV

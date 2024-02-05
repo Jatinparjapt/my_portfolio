@@ -5,7 +5,7 @@ import news1 from "@/public/news1.png"
 import news2 from "@/public/news2.png"
 import quiz1 from "@/public/quiz1.png"
 import quiz2 from "@/public/quiz2.png"
-
+import Head from 'next/head'
 
 const Portfolio = () => {
  
@@ -26,14 +26,17 @@ const Portfolio = () => {
   }
   return (
     <>
+    <Head>
+        <title>Portfolio Page</title>
+      </Head>
    <section className="text-gray-600 body-font">
   <div className="container px-5 py-24 mx-auto flex flex-wrap flex-col">
     <div className="flex mx-auto flex-wrap mb-20">
-      <div onClick={changePhoto2} className="sm:px-6 cursor-pointer py-3 w-1/2 sm:w-auto justify-center sm:justify-start border-b-2 title-font font-medium hover:bg-gray-100 inline-flex items-center leading-none border-indigo-500 text-indigo-500 tracking-wider rounded-t">
-       Project 1 --- News App 
+      <div onClick={changePhoto2} className="sm:px-6 cursor-pointer py-3 w-1/2 sm:w-auto justify-center sm:justify-start border-b-2 title-font font-medium hover:bg-white inline-flex items-center leading-none border-indigo-500 text-indigo-500 tracking-wider rounded-t">
+       Project 1 - News App 
       </div>
-      <div onClick={changePhoto} className="sm:px-6 py-3 w-1/2 sm:w-auto cursor-pointer justify-center sm:justify-start border-b-2 title-font font-medium hover:bg-gray-100 inline-flex items-center leading-none border-indigo-500 text-indigo-500 tracking-wider rounded-t">
-       Project 2 --- Quiz App 
+      <div onClick={changePhoto} className="sm:px-6 py-3 w-1/2 sm:w-auto cursor-pointer justify-center sm:justify-start border-b-2 title-font font-medium hover:bg-white inline-flex items-center leading-none border-indigo-500 text-indigo-500 tracking-wider rounded-t">
+       Project 2 - Quiz App 
       </div>
     </div>
     <Image className="xl:w-1/4 lg:w-1/3 md:w-1/2 w-2/3 block mx-auto mb-10 object-cover object-center rounded" alt="hero" src={photoHref}/>
