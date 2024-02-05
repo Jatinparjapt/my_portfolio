@@ -9,7 +9,9 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import Link from "next/link";
 const Resume = () => {
   const downloadFile = (event)=>{
-    
+    if(typeof window !== "undefined"){
+      window.print()
+    }
   }
   return (
     <>
@@ -17,7 +19,7 @@ const Resume = () => {
         <h1 className=" container text-4xl flex mt-20 justify-center">
           Resume/CV
         </h1>
-        <div className=" container  h-[100vh] w-[60%] flex justify-center  ml-60 ">
+        <div className=" container md:h-[100vh] md:w-[60%] flex justify-center  md:ml-60 ">
           <div className=" container mt-20 ml-16 mr-16 drop-shadow-2xl ">
             <div className="bg-gray-400 w-full py-5 ">
               <h1 className="text-4xl flex justify-center m-3 ">JATIN KUMAR</h1>
@@ -35,7 +37,7 @@ const Resume = () => {
                   <h5 className="ml-2">
                     <LocalPhoneIcon />
                   </h5>
-                  <span> ! No information 😉😉 </span>{" "}
+                  <span> ! No information 😉😉 </span>
                 </div>
                 <div>
                   <h5 className="ml-2">
@@ -52,7 +54,7 @@ const Resume = () => {
                   <Image
                     className="rounded-full flex justify-center "
                     src={resume}
-                    alt=""
+                    alt="resume"
                   />
                 </div>
                 <div className="m-3">
@@ -94,7 +96,7 @@ const Resume = () => {
                 </div>
                 <div className="m-3">
                   <h3 className="text-xl  border-b-black border-t-black border-2 border-l-gray-200 border-r-gray-200 ">
-                    {" "}
+                    
                     Personal Details
                   </h3>
 
@@ -102,7 +104,7 @@ const Resume = () => {
                   <h3> Nationality : Indian</h3>
                 </div>
               </div>
-              <div className="w-[60%] h-full pb-[17rem] bg-slate-200">
+              <div className="w-[60%] h-full pb-[19rem] md:pd-[17rem] bg-slate-200">
                 <div>
                   <p>
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -141,11 +143,15 @@ const Resume = () => {
                 </div>
               </div>
             </div>
-            <div className="container flex justify-start mt-5 w-[60%] ">
+            <div className="container flex justify-start   mt-5 w-[60%] ">
               <Link href={"/resumeDownload.pdf"} download={"resume"} className="inline-flex mb-2 text-white bg-green-400 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg">
                 <GetAppIcon className="mr-2" />
                 Download
               </Link>
+              <button onClick={downloadFile} download={"resume"} className="inline-flex mb-2 ml-3 text-white bg-green-400 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg">
+                <GetAppIcon className="mr-2" />
+                Print
+              </button>
             </div>
           </div>
         </div>

@@ -10,7 +10,7 @@ export default function Home() {
  <>
  <div className="container mt-20  ">
 
- <h1 className="flex  text-4xl text-slate-500  justify-center  "> Hey ! I am Jatin , <span>Full Stack Web Devlopment</span> </h1>
+ <h1 className="flex  text-4xl text-slate-500  justify-center  "> Hey ! I am Jatin ,Full Stack Web Devlopment </h1>
  
  <div className="flex justify-center" >
  <div  id="image" className="w-[60%] h-[50%]  ">
