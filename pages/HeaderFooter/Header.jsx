@@ -39,25 +39,25 @@ function Header(props) {
        
           <ListItem  disablePadding>
             <ListItemButton  className='flex flex-col space-y-3 align-center' >
-            <Link href={"/"}  >
+            <Link href={"/"}  className='hover:border-b-4 border-indigo-500'   >
              Home
              </Link>
-             <Link href={"/Routes/About"} >
+             <Link href={"/Routes/About"} className='hover:border-b-4 border-indigo-500'  >
             About Me
              </Link > 
-             <Link href={"/Routes/Portfolio"} >
+             <Link href={"/Routes/Portfolio"} className='hover:border-b-4 border-indigo-500'  >
             Portfolio
              </Link > 
-             <Link href={"/Routes/Blog"} >
+             <Link href={"/Routes/Blog"} className='hover:border-b-4 border-indigo-500'  >
             Blog
              </Link>
-             <Link href={"/Routes/Skills"} >
+             <Link href={"/Routes/Skills"} className='hover:border-b-4 border-indigo-500'  >
             Skills
              </Link>
-             <Link href={"/Routes/Resume"} >
+             <Link href={"/Routes/Resume"} className='hover:border-b-4 border-indigo-500'  >
             Resume/CV
              </Link>
-             <Link href={"/Routes/Contact"} >
+             <Link href={"/Routes/Contact"} className='hover:border-b-4 border-indigo-500'  >
             Contact
              </Link>
              
@@ -95,25 +95,25 @@ function Header(props) {
           </div>
           </Typography>
           <Box className="hidden space-x-4  sm:flex " >
-             <Link href={"/"}  >
+             <Link href={"/"} className='hover:border-b-4 border-indigo-200'  >
              Home
              </Link>
-             <Link href={"/Routes/About"} >
+             <Link href={"/Routes/About"} className='hover:border-b-4 border-indigo-200'  >
             About Me
              </Link > 
-             <Link href={"/Routes/Portfolio"} >
+             <Link href={"/Routes/Portfolio"} className='hover:border-b-4 border-indigo-200'  >
             Portfolio
              </Link > 
-             <Link href={"/Routes/Blog"} >
+             <Link href={"/Routes/Blog"}  className='hover:border-b-4 border-indigo-200' >
             Blog
              </Link>
-             <Link href={"/Routes/Skills"} >
+             <Link href={"/Routes/Skills"} className='hover:border-b-4 border-indigo-200'  >
             Skills
              </Link>
-             <Link href={"/Routes/Resume"} >
+             <Link href={"/Routes/Resume"} className='hover:border-b-4 border-indigo-200'  >
             Resume/CV
              </Link>
-             <Link href={"/Routes/Contact"} >
+             <Link href={"/Routes/Contact"} className='hover:border-b-4 border-indigo-200'  >
             Contact
              </Link>
           </Box>

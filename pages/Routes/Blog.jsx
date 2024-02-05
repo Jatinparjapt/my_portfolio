@@ -37,7 +37,7 @@ const Blog = () => {
           <p className="leading-relaxed mb-6">Our Quiz App is more than just a collection of interactive quizzes. It's a gateway to a world of knowledge-sharing, where users can create, play, and explore quizzes in a visually appealing and user-friendly environment. By leveraging React, Next.js, Material-UI, and the potential incorporation of Redux for state management, our Quiz App promises an immersive learning experience for users of all backgrounds. Join us on this educational journey, and let the joy of interactive learning unfold before you!</p>
           <div  className="inline-flex items-center">
             <Image alt="testimonial" src={logo} width={400} height={370}/>
-            <span className="flex-grow flex flex-col mr-[22.5rem] md:m-2  pl-4">
+            <span className="flex-grow flex flex-col  m-2  pl-4">
               <span className="title-font font-medium text-gray-900">Jatin Kumar</span>
               <span className="text-gray-500 text-sm">Full Stack Web Developer</span>
             </span>
