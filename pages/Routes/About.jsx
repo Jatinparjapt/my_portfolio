@@ -28,7 +28,7 @@ const About = () => {
 
         <Link href={"/Routes/Resume"} className="inline-flex mb-2 text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded text-lg"><FileOpenIcon  className="mr-2"/>Resume</Link>
 
-        <Link href={"/Routes/Skils"} className="inline-flex mb-2 text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"><PsychologyIcon  className="mr-2"/>Skills</Link>
+        <Link href={"/Routes/Skills"} className="inline-flex mb-2 text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"><PsychologyIcon  className="mr-2"/>Skills</Link>
 
         <Link href={"/Routes/Contact"} className="ml-4  mb-2 inline-flex text-gray-700 bg-yellow-400 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded text-lg"><ContactMailIcon className="mr-2"/>Contact</Link>
       </div>
