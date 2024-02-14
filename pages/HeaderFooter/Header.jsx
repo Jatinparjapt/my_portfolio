@@ -91,7 +91,7 @@ function Header(props) {
           > 
           <div className='flex' >
           <Image src={logo} alt='PortFolio' width={40} height={45} className='rounded-full ' />
-          <span className='ml-2' >Portfolio</span>
+          
           </div>
           </Typography>
           <Box className="hidden space-x-4  sm:flex " >
