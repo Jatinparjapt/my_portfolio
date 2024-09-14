@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /api/
+Disallow: /api/project/
+Allow: /
+
+Sitemap: https://my-portfolio-three-green.vercel.app/sitemap.xml

@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "generate-sitemap": "node sitemap.js",
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && npm run generate-sitemap",
     "start": "next start",
     "lint": "next lint"
   },
@@ -26,6 +27,7 @@
     "react-icons": "^5.3.0",
     "react-scroll": "^1.9.0",
     "react-simple-typewriter": "^5.0.1",
+    "sitemap": "^8.0.0",
     "worker-loader": "^3.0.8"
   },
   "devDependencies": {
