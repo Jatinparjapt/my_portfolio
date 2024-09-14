@@ -2,63 +2,39 @@ import React from 'react'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import Link from 'next/link';
 import Head from 'next/head';
+import { FaYoutube } from "react-icons/fa";
+import { BsInstagram } from "react-icons/bs";
+import { BsGithub } from "react-icons/bs";
+import { ImFacebook2 } from "react-icons/im";
+import { IoLogoLinkedin } from "react-icons/io5";
 const Contect = () => (
   <>
    <Head>
         <title>Contact Page</title>
       </Head>
-    <section className="text-gray-600 body-font relative">
-      <div className="container px-5 py-24 mx-auto">
-        <div className="flex flex-col text-center w-full mb-12">
-          <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Contact Us</h1>
-          <p className="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify.</p>
+    <section className="body-font h-[100vh] flex justify-center ">
+      <div className="container flex flex-col  justify-center items-center ">
+        <div>
+      <h1>Contact With Me</h1>
+
         </div>
-        <div className="lg:w-1/2 md:w-2/3 mx-auto">
-          <div className="flex flex-wrap -m-2">
-            <div className="p-2 w-1/2">
-              <div className="relative">
-                <label htmlFor="name" className="leading-7 text-sm text-gray-600">Name</label>
-                <input type="text" id="name" name="name" className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
-              </div>
-            </div>
-            <div className="p-2 w-1/2">
-              <div className="relative">
-                <label htmlFor="email" className="leading-7 text-sm text-gray-600">Email</label>
-                <input type="email" id="email" name="email" className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
-              </div>
-            </div>
-            <div className="p-2 w-full">
-              <div className="">
-                <label htmlFor="message" className="leading-7 text-sm text-gray-600">Message</label>
-                <textarea id="message" name="message" className="w-full  bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out" placeholder='What would you like to share 
-                ' ></textarea>
-              </div>
-            </div>
-            <div className="p-2 w-full">
-              <button className="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Connect</button>
-            </div>
-            <div className="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
-            
-              <span className="inline-flex">
-                <Link href={"https://www.facebook.com/jatinparjapte.parjapte/"} className="text-gray-500">
-                  <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
-                    <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-                  </svg>
-                </Link>
-                <Link href={"https://www.instagram.com/jatin_prajapat_ji/"} className="ml-4 text-gray-500">
-                  <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
-                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                    <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
-                  </svg>
-                </Link>
-                <Link href={"https://github.com/Jatinparjapt"} className="ml-4 text-gray-500">
-                  <GitHubIcon className='mb-2' />
-                </Link>
-              </span>
-            </div>
-          </div>
+        <div  className='w-[45%] mt-4 bg-[#171749] px-10 rounded-xl py-5 ' >
+
+        <form action="" className='flex flex-col w-full' >
+          <input className='w-full mt-6 px-1 py-2 rounded-lg bg-[#262674] border-b-2 outline-0   ' type="text" placeholder='Enter Your First Name' />
+          <input className='w-full mt-6 px-1 py-2 rounded-lg bg-[#262674] border-b-2 outline-0   ' type="text" placeholder='Enter Your Last Name' />
+          <input className='w-full mt-6 px-1 py-2 rounded-lg bg-[#262674] border-b-2 outline-0   ' type="email" placeholder='Enter Your Email'/>
+          <Link href={"mailto:jatin3961jk@gmail.com?subject=I%20would%20like%20to%20connect%20with%20you&body=I%20need%20help."} title='Connect Through Mail' className='mt-10 bg-blue-600 py-3 md:w-[50%] flex justify-center  md:mx-auto rounded-lg text-xl hover:bg-blue-500 hover:shadow-2xl hover:shadow-blue-700 ' type="button">Connect </Link>
+        </form>
+        <div className='flex place-content-around mt-8' >
+          <Link className='flex items-center ' title='Instagram' href={"https://www.instagram.com/jatin_prajapat_ji/"}><BsInstagram className='mx-1' /> Instagram</Link>
+          <Link className='flex items-center 'title='LinkedIn' href={"https://www.linkedin.com/in/jatin-kumar-ji/"}> <IoLogoLinkedin className='mx-1' /> LinkedIn</Link>
+          <Link className='flex items-center ' title='Github' href={"https://github.com/Jatinparjapt"}> <BsGithub className='mx-1' /> Github</Link>
+          <Link className='flex items-center ' title='YouTube' href={"https://www.youtube.com/@parjapticreator"}> <FaYoutube className='mx-1' /> Youtube</Link>
+        </div>
         </div>
       </div>
+       
     </section>
   </>
 )

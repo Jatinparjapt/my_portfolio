@@ -1,146 +1,211 @@
-import  React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import CssBaseline from '@mui/material/CssBaseline';
-import Divider from '@mui/material/Divider';
-import Drawer from '@mui/material/Drawer';
-import IconButton from '@mui/material/IconButton';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
-import MenuIcon from '@mui/icons-material/Menu';
-import Toolbar from '@mui/material/Toolbar';
-import Link from 'next/link';
-import Typography from '@mui/material/Typography';
-import logo from "@/public/logo.jpg"
-import Image from 'next/image';
-
-const drawerWidth = 240;
-
+import React, { useState, useEffect } from "react";
+import { Link } from "react-scroll";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { RiCloseLargeLine } from "react-icons/ri";
+import { Typewriter } from "react-simple-typewriter";
+// import Link from 'next/link';
 
 function Header(props) {
-  const { window } = props;
-  const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [showHamburgar, setShowHamburgar] = useState(true);
+  const [scrolled, setScrolled] = useState(false);
 
-  const handleDrawerToggle = () => {
-    setMobileOpen((prevState) => !prevState);
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
 
-  const drawer = (
-    <Box  onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        <div className="flex justify-center">
-      <Image src={logo} alt='PortFolio' width={40} height={45} className='rounded-full' />
-      </div>
-      </Typography>
-      <Divider />
-      <List>
-       
-          <ListItem  disablePadding>
-            <ListItemButton  className='flex flex-col space-y-3 align-center' >
-            <Link href={"/"}  className='hover:border-b-4 border-indigo-500'   >
-             Home
-             </Link>
-             <Link href={"/Routes/About"} className='hover:border-b-4 border-indigo-500'  >
-            About Me
-             </Link > 
-             <Link href={"/Routes/Portfolio"} className='hover:border-b-4 border-indigo-500'  >
-            Portfolio
-             </Link > 
-             <Link href={"/Routes/Blog"} className='hover:border-b-4 border-indigo-500'  >
-            Blog
-             </Link>
-             <Link href={"/Routes/Skills"} className='hover:border-b-4 border-indigo-500'  >
-            Skills
-             </Link>
-             <Link href={"/Routes/Resume"} className='hover:border-b-4 border-indigo-500'  >
-            Resume/CV
-             </Link>
-             <Link href={"/Routes/Contact"} className='hover:border-b-4 border-indigo-500'  >
-            Contact
-             </Link>
-             
-            </ListItemButton>
-          </ListItem>
-       
-      </List>
-    </Box>
-  );
-
-  const container = window !== undefined ? () => window().document.body : undefined;
-
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
-    <Box  sx={{ display: 'flex' }}>
-      <CssBaseline />
-      <AppBar component="nav">
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-          > 
-          <div className='flex' >
-          <Image src={logo} alt='PortFolio' width={40} height={45} className='rounded-full ' />
-          
+    <>
+      <header
+        className={`py-5 rounded-md z-30 shadow-2xl fixed w-full transition-colors duration-300 ${
+          scrolled ? "bg-[#06043E]" : "bg-transparent"
+        }`}
+      >
+        <nav>
+          <div className="flex md:place-content-around place-content-between mx-6 ">
+            <Link
+              activeClass="active"
+              to="home"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              className="py-2 cursor-pointer px-4 border-2 hover:border-blue-600 hover:shadow-2xl hover:shadow-blue-500/50 "
+            >
+              <button>
+                <span className=" font-semibold">
+                  {"<"}
+                  <Typewriter
+                    words={[
+                      "Code = Love ❤️",
+                      "Code != Love ❤️ ",
+                      "Code = Life ❤️",
+                      "Code != Life ❤️ ",
+                    ]}
+                    loop={Infinity}
+                    cursor
+                    cursorStyle="|"
+                    typeSpeed={65}
+                    deleteSpeed={45}
+                    delaySpeed={1000}
+                  />{" "}
+                  {"/>"}
+                </span>
+              </button>
+            </Link>
+            <div className="flex cursor-pointer md:hidden items-center">
+              <button className={"hover:text-blue-500"} type="button">
+                {showHamburgar ? (
+                  <RxHamburgerMenu
+                    onClick={() => setShowHamburgar(false)}
+                    className="text-3xl"
+                  />
+                ) : (
+                  <RiCloseLargeLine
+                    onClick={() => setShowHamburgar(true)}
+                    className="text-3xl"
+                  />
+                )}
+              </button>
+            </div>
+
+            <ul className="hidden md:flex md:gap-9 items-center cursor-pointer  font-medium ">
+              <Link
+                activeClass="active"
+                to="about"
+                offset={50}
+                duration={500}
+                spy={true}
+                smooth={true}
+                className="hover:text-blue-300 hover:border-b-2 hover:border-blue-600 hover:shadow-2xl hover:shadow-blue-500/50"
+              >
+                About Me
+              </Link>
+              <Link
+                activeClass="active"
+                to="projects"
+                offset={50}
+                duration={500}
+                spy={true}
+                smooth={true}
+                className="hover:text-blue-300 hover:border-b-2 hover:border-blue-600 hover:shadow-2xl hover:shadow-blue-500/50"
+              >
+                Projects
+              </Link>
+              <Link
+                activeClass="active"
+                to="skills"
+                offset={50}
+                duration={500}
+                spy={true}
+                smooth={true}
+                className="hover:text-blue-300 hover:border-b-2 hover:border-blue-600 hover:shadow-2xl hover:shadow-blue-500/50"
+              >
+                Skills
+              </Link>
+              <Link
+                activeClass="active"
+                to="/Routes/Resume"
+                offset={50}
+                duration={500}
+                spy={true}
+                smooth={true}
+                className="hover:text-blue-300 hover:border-b-2 hover:border-blue-600 hover:shadow-2xl hover:shadow-blue-500/50"
+              >
+                Resume
+              </Link>
+              <Link
+                activeClass="active"
+                to="contact"
+                offset={50}
+                duration={500}
+                spy={true}
+                smooth={true}
+                className="hover:text-blue-300 hover:border-b-2 hover:border-blue-600 hover:shadow-2xl hover:shadow-blue-500/50"
+              >
+                Contact
+              </Link>
+            </ul>
+            <div className="rounded-full hidden cursor-pointer px-4 md:flex  items-center bg-blue-500 hover:border-blue-600 hover:shadow-2xl hover:shadow-blue-600  ">
+              <button>Download</button>
+            </div>
           </div>
-          </Typography>
-          <Box className="hidden space-x-4  sm:flex " >
-             <Link href={"/"} className='hover:border-b-4 border-indigo-200'  >
-             Home
-             </Link>
-             <Link href={"/Routes/About"} className='hover:border-b-4 border-indigo-200'  >
-            About Me
-             </Link > 
-             <Link href={"/Routes/Portfolio"} className='hover:border-b-4 border-indigo-200'  >
-            Portfolio
-             </Link > 
-             <Link href={"/Routes/Blog"}  className='hover:border-b-4 border-indigo-200' >
-            Blog
-             </Link>
-             <Link href={"/Routes/Skills"} className='hover:border-b-4 border-indigo-200'  >
-            Skills
-             </Link>
-             <Link href={"/Routes/Resume"} className='hover:border-b-4 border-indigo-200'  >
-            Resume/CV
-             </Link>
-             <Link href={"/Routes/Contact"} className='hover:border-b-4 border-indigo-200'  >
-            Contact
-             </Link>
-          </Box>
-        </Toolbar>
-      </AppBar>
-      <nav>
-        <Drawer
-          container={container}
-          variant="temporary"
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
-          }}
-          sx={{
-            display: { xs: 'block', sm: 'none' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-          }}
-        >
-          {drawer}
-        </Drawer>
-      </nav>
-      
-    </Box>
+          {/* for small scren size */}
+
+          <ul
+            className={`${
+              showHamburgar ? "hidden" : "flex"
+            } flex-col gap-3 text-xl font-medium cursor-pointer items-center mt-4 `}
+          >
+            <Link
+              activeClass="active"
+              to="about"
+              offset={50}
+              duration={500}
+              spy={true}
+              smooth={true}
+              className="hover:text-blue-300 hover:border-b-2 outline-gray-100 "
+            >
+              About Me
+            </Link>
+            <Link
+              activeClass="active"
+              to="projects"
+              offset={50}
+              duration={500}
+              spy={true}
+              smooth={true}
+              className="hover:text-blue-300 hover:border-b-2 outline-gray-100 "
+            >
+              Projects
+            </Link>
+            <Link
+              activeClass="active"
+              to="skills"
+              offset={50}
+              duration={500}
+              spy={true}
+              smooth={true}
+              className="hover:text-blue-300 hover:border-b-2 outline-gray-100 "
+            >
+              Skills
+            </Link>
+            <Link
+              activeClass="active"
+              to="/Routes/Resume"
+              offset={50}
+              duration={500}
+              spy={true}
+              smooth={true}
+              className="hover:text-blue-300 hover:border-b-2 outline-gray-100 "
+            >
+              Resume
+            </Link>
+            <Link
+              activeClass="active"
+              to="contect"
+              offset={50}
+              duration={500}
+              spy={true}
+              smooth={true}
+              className="hover:text-blue-300 hover:border-b-2 outline-gray-100 "
+            >
+              Contact
+            </Link>
+          </ul>
+        </nav>
+      </header>
+    </>
   );
 }
-
-
 
 export default Header;
