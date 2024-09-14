@@ -68,8 +68,13 @@ const ProjectDetail = ({ project }) => {
 })}
         </ul> 
       </div>
+      <div>
+
       <Link href={project.liveLink} target="_blank"
     rel="noopener noreferrer" className='bg-blue-700 text-xl px-4 mt-6 rounded-xl py-2 hover:shadow-2xl hover:shadow-indigo-700 ' type="button">Live Link</Link>
+    <Link href={"/"} className='bg-blue-700 text-xl px-4 mt-6 rounded-xl py-2 hover:shadow-2xl mx-4 hover:shadow-indigo-700 '  >Go Back
+    </Link>
+    </div>
 </div>
 
 

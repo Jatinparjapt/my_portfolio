@@ -3,7 +3,7 @@ import { Worker, Viewer } from '@react-pdf-viewer/core';
 import '@react-pdf-viewer/core/lib/styles/index.css';
 import resume from '@/public/Jatin_Kumar.pdf'; // Ensure the path is correct
 import Head from 'next/head';
-
+import Link from 'next/link';
 // PDF worker script configuration
 const pdfWorkerUrl = "/pdf.worker.js";
 
@@ -31,10 +31,12 @@ const Resume = () => {
           </Worker>
         </div>
         <div className="flex place-content-around py-10  bg-white ">
-          <a href={resume}>
+          <Link href={resume}>
       <button className='bg-[#171750] px-4 py-2 text-xl rounded-md hover:shadow-2xl hover:shadow-blue-800  ' type="button">Download Resume</button>
-          </a>
+          </Link>
       <button onClick={printPdf} className='bg-[#171750] px-4 py-2 text-xl rounded-md hover:shadow-2xl hover:shadow-blue-800  ' type="button">Print Resume</button>
+      <Link href={"/"}  className='bg-[#171750] px-4 py-2 text-xl rounded-md hover:shadow-2xl hover:shadow-blue-800  ' type="button">Go Back </Link>
+
         </div>
       </div>
     </>

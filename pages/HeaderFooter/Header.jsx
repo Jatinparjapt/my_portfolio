@@ -3,8 +3,8 @@ import { Link } from "react-scroll";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RiCloseLargeLine } from "react-icons/ri";
 import { Typewriter } from "react-simple-typewriter";
-// import Link from 'next/link';
-
+import NextLink from 'next/link';
+import resume from '@/public/Jatin_Kumar.pdf';
 function Header(props) {
   const [showHamburgar, setShowHamburgar] = useState(true);
   const [scrolled, setScrolled] = useState(false);
@@ -41,7 +41,7 @@ function Header(props) {
               duration={500}
               className="py-2 cursor-pointer px-4 border-2 hover:border-blue-600 hover:shadow-2xl hover:shadow-blue-500/50 "
             >
-              <button>
+              <div>
                 <span className=" font-semibold">
                   {"<"}
                   <Typewriter
@@ -60,7 +60,7 @@ function Header(props) {
                   />{" "}
                   {"/>"}
                 </span>
-              </button>
+              </div>
             </Link>
             <div className="flex cursor-pointer md:hidden items-center">
               <button className={"hover:text-blue-500"} type="button">
@@ -112,9 +112,9 @@ function Header(props) {
               >
                 Skills
               </Link>
-              <Link
+              <NextLink
                 activeClass="active"
-                to="/Routes/Resume"
+                href="/Routes/Resume"
                 offset={50}
                 duration={500}
                 spy={true}
@@ -122,7 +122,7 @@ function Header(props) {
                 className="hover:text-blue-300 hover:border-b-2 hover:border-blue-600 hover:shadow-2xl hover:shadow-blue-500/50"
               >
                 Resume
-              </Link>
+              </NextLink>
               <Link
                 activeClass="active"
                 to="contact"
@@ -135,9 +135,9 @@ function Header(props) {
                 Contact
               </Link>
             </ul>
-            <div className="rounded-full hidden cursor-pointer px-4 md:flex  items-center bg-blue-500 hover:border-blue-600 hover:shadow-2xl hover:shadow-blue-600  ">
+            <NextLink href={resume} className="rounded-full hidden cursor-pointer px-4 md:flex  items-center bg-blue-500 hover:border-blue-600 hover:shadow-2xl hover:shadow-blue-600  ">
               <button>Download</button>
-            </div>
+            </NextLink>
           </div>
           {/* for small scren size */}
 
