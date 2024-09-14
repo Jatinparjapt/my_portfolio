@@ -55,28 +55,22 @@ const Contect = () => (
         <link rel="alternate" hreflang="x-default" href="https://my-portfolio-three-green.vercel.app/contact"/>
 
         {/* Structured Data */}
-        <script type="application/ld+json">
-        {{
-          "@context": "https://schema.org",
-          "@type": "ContactPage",
-          "name": "Contact Jatin Kumar",
-          "url": "https://my-portfolio-three-green.vercel.app/contact",
-          "description": "Contact Jatin Kumar, a skilled web developer. Reach out for inquiries, collaborations, or just to say hello.",
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "contactType": "customer service",
-            "telephone": "+1-123-456-7890",
-            "email": "contact@my-portfolio-three-green.vercel.app"
-          },
-          "sameAs": [
-            "https://www.linkedin.com/in/jatin-kumar/",
-            "https://github.com/jatin-prajapt",
-            "https://my-portfolio-three-green.vercel.app",
-            "https://www.instagram.com/jatin_prajapat_ji/",
-            "https://www.facebook.com/jatinparjapte.parjapte/"
-          ]
-        }}
-        </script>
+        <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "http://schema.org",
+      "@type": "Person",
+      name: "Jatin Kumar",
+      url: "https://my-portfolio-three-green.vercel.app",
+      description: "Hello! I'm Jatin...",
+      sameAs: [
+        "https://www.linkedin.com/in/jatin-kumar/","https://github.com/jatin-prajapt","https://my-portfolio-three-green.vercel.app","https://www.instagram.com/jatin_prajapat_ji/","https://www.facebook.com/jatinparjapte.parjapte/"
+      ],
+    }),
+  }}
+/>
+
 
         {/* Additional Meta Tags */}
         <meta name="apple-mobile-web-app-title" content="Contact Jatin Kumar"/>

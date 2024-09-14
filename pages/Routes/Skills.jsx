@@ -74,22 +74,23 @@ const Skills = () => {
         <link rel="alternate" hreflang="x-default" href="https://my-portfolio-three-green.vercel.app/skills"/>
 
         {/* Structured Data */}
-        <script type="application/ld+json">
-        {{
-          "@context": "https://schema.org",
-          "@type": "Person",
-          "name": "Jatin Kumar",
-          "url": "https://my-portfolio-three-green.vercel.app/skills",
-          "description": "Explore the skills and expertise of Jatin Kumar, a web developer proficient in modern technologies and programming languages.",
-          "sameAs": [
-           "https://www.linkedin.com/in/jatin-kumar/",
-            "https://github.com/jatin-prajapt",
-            "https://my-portfolio-three-green.vercel.app",
-            "https://www.instagram.com/jatin_prajapat_ji/",
-            "https://www.facebook.com/jatinparjapte.parjapte/"
-          ]
-        }}
-        </script>
+        <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "http://schema.org",
+      "@type": "Person",
+      name: "Jatin Kumar",
+      url: "https://my-portfolio-three-green.vercel.app",
+      description: "Hello! I'm Jatin...",
+      sameAs: [
+       "https://www.linkedin.com/in/jatin-kumar/","https://github.com/jatin-prajapt","https://my-portfolio-three-green.vercel.app","https://www.instagram.com/jatin_prajapat_ji/","https://www.facebook.com/jatinparjapte.parjapte/"
+        // Other social profiles
+      ],
+    }),
+  }}
+/>
+
 
         {/* Additional Meta Tags */}
         <meta name="apple-mobile-web-app-title" content="Skills"/>

@@ -78,26 +78,22 @@ const Portfolio = () => {
         <link rel="alternate" hreflang="x-default" href="https://my-portfolio-three-green.vercel.app/projects"/>
 
         {/* Structured Data */}
-        <script type="application/ld+json">
-        {{
-          "@context": "https://schema.org",
-          "@type": "WebPage",
-          "name": "Projects | Jatin Kumar",
-          "url": "https://my-portfolio-three-green.vercel.app/projects",
-          "description": "Explore the diverse range of projects showcased by Jatin Kumar. Discover detailed analyses, insights, and visual representations of each project.",
-          "publisher": {
-            "@type": "Organization",
-            "name": "Jatin Kumar's Portfolio"
-          },
-          "sameAs": [
-           "https://www.linkedin.com/in/jatin-kumar/",
-            "https://github.com/jatin-prajapt",
-            "https://my-portfolio-three-green.vercel.app",
-            "https://www.instagram.com/jatin_prajapat_ji/",
-            "https://www.facebook.com/jatinparjapte.parjapte/"
-          ]
-        }}
-        </script>
+        <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "http://schema.org",
+      "@type": "Person",
+      name: "Jatin Kumar",
+      url: "https://my-portfolio-three-green.vercel.app",
+      description: "Hello! I'm Jatin...",
+      sameAs: [
+        "https://www.linkedin.com/in/jatin-kumar/","https://github.com/jatin-prajapt","https://my-portfolio-three-green.vercel.app","https://www.instagram.com/jatin_prajapat_ji/","https://www.facebook.com/jatinparjapte.parjapte/"
+      ],
+    }),
+  }}
+/>
+
 
         {/* Additional Meta Tags */}
         <meta name="apple-mobile-web-app-title" content="Projects"/>
