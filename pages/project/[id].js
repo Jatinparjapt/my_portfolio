@@ -3,12 +3,6 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Image from 'next/image';
 
-const fetchProjectById = async (id) => {
-  // Replace this with your actual data fetching logic
-  const response = await fetch(`http://localhost:3000/api/project/${id}`);
-  const project = await response.json();
-  return project;
-};
 
 const ProjectDetail = ({ project }) => {
   const router = useRouter();
@@ -86,7 +80,13 @@ const ProjectDetail = ({ project }) => {
 
 export async function getServerSideProps(context) {
   const { id } = context.params;
-
+  const fetchProjectById = async (id) => {
+    // Replace this with your actual data fetching logic
+    const response = await fetch(`https://my-portfolio-three-green.vercel.app/api/project/${id}`);
+    const project = await response.json();
+    console.log(project , "from id")
+    return project;
+  };
   // Fetch the project details using the ID
   const project = await fetchProjectById(id);
 

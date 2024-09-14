@@ -47,9 +47,9 @@ function Header(props) {
                   <Typewriter
                     words={[
                       "Code = Love ❤️",
-                      "Code != Love ❤️ ",
+                      "Code != Love❤️",
                       "Code = Life ❤️",
-                      "Code != Life ❤️ ",
+                      "Code != Life❤️",
                     ]}
                     loop={Infinity}
                     cursor

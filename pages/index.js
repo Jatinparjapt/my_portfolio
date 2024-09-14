@@ -17,11 +17,11 @@ export default function Home() {
   <Head>
         <title>Home Page</title>
       </Head>
-      <Element name="home" >
-      <section id="home" >
+      <Element name="home" className="w-full" >
+      <section id="home " className="w-full" >
       <div className="pt-24 h-[100vh] w-full object-contain bg-center " style={{ backgroundImage: `url(${image1.src})` }} >
 
-<h1 className="flex  relative top-36 md:text-5xl text-2xl md:ml-20 ml-10 "> <pre>
+<h1 className="flex justify-center md:justify-start relative top-36 md:text-3xl lg:text-5xl text-base sm:text-xl md:ml-20 sm:ml-10  "> <pre>
   <h2> 
      Hey ! I am Jatin Kumar
     </h2>

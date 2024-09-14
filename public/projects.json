@@ -116,6 +116,9 @@
     "title": "YouTube Subscriber Backend -  Efficient Subscriber Management",
     "Description": "The YouTube Subscriber Backend is a robust and scalable solution designed to manage and analyze subscriber data for YouTube channels. This backend system facilitates the retrieval and storage of subscriber information, including subscriber counts, engagement metrics, and demographic data. It provides APIs to fetch and update subscriber details, handle subscription events, and generate comprehensive reports on subscriber growth and trends. The system ensures secure and efficient data management, integrates seamlessly with YouTube's API, and supports real-time updates to reflect the latest subscriber statistics.",
     "image": "/youtube.png",
+    "frontend":[
+      "View : For building interactive and dynamic user interfaces."
+    ],
     "backend":[
         "Node.js: For server-side logic and API development.",
        "Express.js: For creating RESTful APIs and managing routes.",

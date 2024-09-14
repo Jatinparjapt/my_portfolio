@@ -37,11 +37,11 @@ const Portfolio = () => {
       </Head>
    <section className="pt-24 flex  justify-center flex-col ">
     <h1 className='flex justify-center items-center md:text-2xl font-semibold'>In-Depth Project Analysis  </h1>
-    <div className="main md:w-[80%] flex flex-wrap justify-center pt-10  rounded-lg mx-auto ">
+    <div className="main md:w-[80%] w-full flex flex-wrap justify-center pt-10  rounded-lg md:mx-auto ">
       {data.map((items, index)=>(
-        <Link key={index} href={`/project/${items.id}`} > 
-        <div  className={`first hover:shadow-2xl ${index=== 4 ? "md:-mt-10":""} hover:shadow-indigo-700 w-auto px-3 py-6 h-auto mx-4 rounded-xl my-4 md:min-w-48 md:max-w-72 bg-[#151347]`} >
-        <div className="image h-auto mx-3 rounded-lg "><Image width={200} height={200} className='object-cover rounded-lg h-full  ' src={items.image} /></div>
+        <Link className='' key={index} href={`/project/${items.id}`} > 
+        <div  className={`first px-5 py-4 hover:shadow-2xl ${index=== 4 ? "lg:-mt-10":""} hover:shadow-indigo-700 w-auto  h-auto mx-4 rounded-xl my-4  md:max-w-64 bg-[#151347]`} >
+        <div className="image h-auto w-auto  rounded-lg "><Image width={200} height={200} className='object-cover rounded-lg h-full w-full  ' src={items.image} /></div>
         <div className="heading flex my-4 justify-center font-medium text-2xl ">{items.title}</div>
         <div className="desc">
       {items.Description}

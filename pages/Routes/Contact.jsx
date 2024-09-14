@@ -18,7 +18,7 @@ const Contect = () => (
       <h1>Contact With Me</h1>
 
         </div>
-        <div  className='w-[45%] mt-4 bg-[#171749] px-10 rounded-xl py-5 ' >
+        <div  className='md:w-[45%] w-full mt-4 bg-[#171749] md:px-10 rounded-xl py-5 ' >
 
         <form action="" className='flex flex-col w-full' >
           <input className='w-full mt-6 px-1 py-2 rounded-lg bg-[#262674] border-b-2 outline-0   ' type="text" placeholder='Enter Your First Name' />
@@ -26,7 +26,7 @@ const Contect = () => (
           <input className='w-full mt-6 px-1 py-2 rounded-lg bg-[#262674] border-b-2 outline-0   ' type="email" placeholder='Enter Your Email'/>
           <Link href={"mailto:jatin3961jk@gmail.com?subject=I%20would%20like%20to%20connect%20with%20you&body=I%20need%20help."} title='Connect Through Mail' className='mt-10 bg-blue-600 py-3 md:w-[50%] flex justify-center  md:mx-auto rounded-lg text-xl hover:bg-blue-500 hover:shadow-2xl hover:shadow-blue-700 ' type="button">Connect </Link>
         </form>
-        <div className='flex place-content-around mt-8' >
+        <div className='flex flex-wrap place-content-around mt-8' >
           <Link className='flex items-center ' title='Instagram' href={"https://www.instagram.com/jatin_prajapat_ji/"}><BsInstagram className='mx-1' /> Instagram</Link>
           <Link className='flex items-center 'title='LinkedIn' href={"https://www.linkedin.com/in/jatin-kumar-ji/"}> <IoLogoLinkedin className='mx-1' /> LinkedIn</Link>
           <Link className='flex items-center ' title='Github' href={"https://github.com/Jatinparjapt"}> <BsGithub className='mx-1' /> Github</Link>
