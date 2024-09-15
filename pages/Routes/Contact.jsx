@@ -101,13 +101,13 @@ const Contect = () => (
         <meta name="twitter:site" content="@yourtwitterhandle"/>
         <meta name="twitter:creator" content="@yourtwitterhandle"/>
       </Head>
-    <section className="body-font h-[100vh] flex justify-center ">
+    <section className="body-font md:h-[100vh] h-[80vh] mx-2 flex justify-center ">
       <div className="container flex flex-col  justify-center items-center ">
         <div>
       <h1>Contact With Me</h1>
 
         </div>
-        <div  className='md:w-[45%] w-full mt-4 bg-[#171749] md:px-10 rounded-xl py-5 ' >
+        <div  className='md:w-[60%] lg:w-[45%] w-full mt-4 bg-[#171749] md:px-10 rounded-xl py-5 px-4 mx-2 ' >
 
         <form action="" className='flex flex-col w-full' >
           <input className='w-full mt-6 px-1 py-2 rounded-lg bg-[#262674] border-b-2 outline-0   ' type="text" placeholder='Enter Your First Name' />

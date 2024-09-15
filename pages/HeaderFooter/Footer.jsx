@@ -12,7 +12,7 @@ const footer = () => {
   return (
     <>
     <footer className="">
-  <div className=" bg-[#151347] container rounded-lg shadow-xl mb-4 px-5 py-4 mx-auto">
+  <div className=" bg-[#151347] container rounded-lg shadow-xl my-6 px-5 py-4 mx-auto">
     <div className=" mx-auto py-4 px-5 flex flex-wrap place-content-evenly  ">
       <Link href={"/"}  className=" text-sm flex text-center sm:text-left">jatin_prajapat_ji
         <p   className=" ml-1" >©MyPortfolio</p>
