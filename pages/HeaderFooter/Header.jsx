@@ -8,7 +8,9 @@ import resume from '@/public/Jatin_Kumar.pdf';
 function Header(props) {
   const [showHamburgar, setShowHamburgar] = useState(true);
   const [scrolled, setScrolled] = useState(false);
-
+ const changeHamburgar = ()=>{
+  setShowHamburgar((prevValue) => !prevValue);
+ }
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 10) {
@@ -33,7 +35,8 @@ function Header(props) {
         <nav>
           <div className="flex md:place-content-around place-content-between mx-6 ">
             <Link
-              activeClass="active"
+            title="Home"
+             activeclass="active"
               to="home"
               spy={true}
               smooth={true}
@@ -63,7 +66,7 @@ function Header(props) {
               </div>
             </Link>
             <div className="flex cursor-pointer md:hidden items-center">
-              <button className={"hover:text-blue-500"} type="button">
+              <button title="Menu" className={"hover:text-blue-500"} type="button">
                 {showHamburgar ? (
                   <RxHamburgerMenu
                     onClick={() => setShowHamburgar(false)}
@@ -79,8 +82,9 @@ function Header(props) {
             </div>
 
             <ul className="hidden md:flex md:gap-9 items-center cursor-pointer  font-medium ">
-              <Link
-                activeClass="active"
+              <Link 
+              title="About"
+               activeclass="active"
                 to="about"
                 offset={50}
                 duration={500}
@@ -91,7 +95,8 @@ function Header(props) {
                 About Me
               </Link>
               <Link
-                activeClass="active"
+              title="Projects"
+               activeclass="active"
                 to="projects"
                 offset={50}
                 duration={500}
@@ -102,7 +107,8 @@ function Header(props) {
                 Projects
               </Link>
               <Link
-                activeClass="active"
+              title="Skills"
+               activeclass="active"
                 to="skills"
                 offset={50}
                 duration={500}
@@ -113,18 +119,15 @@ function Header(props) {
                 Skills
               </Link>
               <NextLink
-                activeClass="active"
+               title="Resume"
                 href="/Routes/Resume"
-                offset={50}
-                duration={500}
-                spy={true}
-                smooth={true}
                 className="hover:text-blue-300 hover:border-b-2 hover:border-blue-600 hover:shadow-2xl hover:shadow-blue-500/50"
               >
                 Resume
               </NextLink>
               <Link
-                activeClass="active"
+              title="Contact"
+               activeclass="active"
                 to="contact"
                 offset={50}
                 duration={500}
@@ -135,19 +138,20 @@ function Header(props) {
                 Contact
               </Link>
             </ul>
-            <NextLink href={resume} className="rounded-full hidden cursor-pointer px-4 md:flex  items-center bg-blue-500 hover:border-blue-600 hover:shadow-2xl hover:shadow-blue-600  ">
+            <NextLink title="Download Resume" href={resume} className="rounded-full hidden cursor-pointer px-4 md:flex  items-center bg-blue-500 hover:border-blue-600 hover:shadow-2xl hover:shadow-blue-600  ">
               <button>Download</button>
             </NextLink>
           </div>
           {/* for small scren size */}
 
-          <ul
+          <ul 
             className={`${
               showHamburgar ? "hidden" : "flex"
             } flex-col gap-3 text-xl font-medium cursor-pointer items-center mt-4 `}
           >
-            <Link
-              activeClass="active"
+            <Link onClick={changeHamburgar}
+             activeclass="active"
+             title="About Me"
               to="about"
               offset={50}
               duration={500}
@@ -157,8 +161,9 @@ function Header(props) {
             >
               About Me
             </Link>
-            <Link
-              activeClass="active"
+            <Link onClick={changeHamburgar}
+             activeclass="active"
+             title="Projects"
               to="projects"
               offset={50}
               duration={500}
@@ -168,8 +173,9 @@ function Header(props) {
             >
               Projects
             </Link>
-            <Link
-              activeClass="active"
+            <Link onClick={changeHamburgar}
+             activeclass="active"
+             title="Skills"
               to="skills"
               offset={50}
               duration={500}
@@ -179,19 +185,17 @@ function Header(props) {
             >
               Skills
             </Link>
-            <Link
-              activeClass="active"
-              to="/Routes/Resume"
-              offset={50}
-              duration={500}
-              spy={true}
-              smooth={true}
+            <NextLink onClick={changeHamburgar}
+             title="Resume"
+              href="/Routes/Resume"
+              
               className="hover:text-blue-300 hover:border-b-2 outline-gray-100 "
             >
               Resume
-            </Link>
-            <Link
-              activeClass="active"
+            </NextLink>
+            <Link onClick={changeHamburgar}
+             activeclass="active"
+             title="Contact"
               to="contect"
               offset={50}
               duration={500}
