@@ -7,7 +7,7 @@ import { RiCloseLargeLine } from "react-icons/ri";
 import { Typewriter } from "react-simple-typewriter";
 import resume from "@/public/Jatin_Kumar.pdf";
 
-const NavItem = ({ to, title, children, onClick }: any) => {
+const NavItem = ({ to, title, children, onClick }) => {
   const { pathname } = useRouter();
   const isHome = pathname === "/";
 
