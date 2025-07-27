@@ -1,7 +1,7 @@
 // pages/_document.js
 
 import Document, { Html, Head, Main, NextScript } from 'next/document';
-
+import { GA_MEASUREMENT_ID } from '../lib/gtag';
 class MyDocument extends Document {
   render() {
     return (
@@ -39,6 +39,22 @@ class MyDocument extends Document {
           <meta name="twitter:creator" content="@yourtwitterhandle" />
           <link rel="alternate" hrefLang="en" href="https://my-portfolio-three-green.vercel.app" />
           <link rel="alternate" hrefLang="x-default" href="https://my-portfolio-three-green.vercel.app" />
+
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-FKE6Z8VBKB"></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-FKE6Z8VBKB', {
+                  page_path: window.location.pathname,
+                });
+              `,
+            }}
+          />
+
+
         </Head>
         <body>
           <Main />
