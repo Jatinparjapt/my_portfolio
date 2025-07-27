@@ -39,7 +39,9 @@ class MyDocument extends Document {
           <meta name="twitter:creator" content="@yourtwitterhandle" />
           <link rel="alternate" hrefLang="en" href="https://my-portfolio-three-green.vercel.app" />
           <link rel="alternate" hrefLang="x-default" href="https://my-portfolio-three-green.vercel.app" />
-
+              {/* Google AdSense Script */}
+              <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7503950851158024"
+     crossorigin="anonymous"></script>
           <script async src="https://www.googletagmanager.com/gtag/js?id=G-FKE6Z8VBKB"></script>
           <script
             dangerouslySetInnerHTML={{
@@ -53,7 +55,7 @@ class MyDocument extends Document {
               `,
             }}
           />
-
+        
 
         </Head>
         <body>

@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Head from 'next/head'
 import { event as gaEvent } from "@/lib/gtag";
+import Script from "next/script";
 const Portfolio = () => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -27,6 +28,13 @@ const Portfolio = () => {
 
     fetchData();
   }, []);
+  // useEffect(() => {
+  //   try {
+  //     (window.adsbygoogle = window.adsbygoogle || []).push({});
+  //   } catch (e) {
+  //     console.error("Adsbygoogle push error:", e);
+  //   }
+  // }, []);
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;
 
@@ -129,6 +137,16 @@ const Portfolio = () => {
       </Head>
    <section className="pt-24 flex  justify-center flex-col ">
     <h1 className='flex justify-center items-center md:text-2xl font-semibold'>In-Depth Project Analysis  </h1>
+    {/* <div className="flex justify-center my-4">
+        <ins
+          className="adsbygoogle"
+          style={{ display: "block" }}
+          data-ad-client="ca-pub-7503950851158024"
+          data-ad-slot="1234567890"   // Replace with your actual ad-slot
+          data-ad-format="auto"
+          data-full-width-responsive="true"
+        ></ins>
+      </div> */}
     <div className="main md:w-[80%] w-full flex flex-wrap justify-center pt-10  rounded-lg md:mx-auto ">
       {data.map((items, index)=>(
         <Link title={items.title}  className='' key={index} href={`/project/${items.id}`} onClick={() =>
