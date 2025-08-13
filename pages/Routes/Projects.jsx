@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Head from 'next/head'
 import { event as gaEvent } from "@/lib/gtag";
 import Script from "next/script";
+import { useGetPostsQuery } from '../features/api/apiSlice';
 const Portfolio = () => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -28,6 +29,8 @@ const Portfolio = () => {
 
     fetchData();
   }, []);
+     const { data : postData, error : postError, isLoading : postLoading } = useGetPostsQuery();
+     console.log(postData , "project is not ")
   // useEffect(() => {
   //   try {
   //     (window.adsbygoogle = window.adsbygoogle || []).push({});

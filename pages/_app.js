@@ -3,6 +3,8 @@ import Footer from "./HeaderFooter/Footer";
 import Header from "./HeaderFooter/Header";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
+import { Provider } from 'react-redux';
+import {store} from "@/lib/store"
 import Script from "next/script"; // ✅ Import Script from next
 
 export default function App({ Component, pageProps }) {
@@ -39,9 +41,12 @@ export default function App({ Component, pageProps }) {
      
 
       {/* ✅ Layout */}
+
+<Provider store={store} >
       <Header />
       <Component {...pageProps} />
       <Footer />
+</Provider>
     </>
   );
 }
