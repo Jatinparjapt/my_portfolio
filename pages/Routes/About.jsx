@@ -10,6 +10,8 @@ import aboutMe from "@/public/aboutMe2.jpg"
 import aboutb from "@/public/aboutB.jpg"
 import Head from 'next/head';
 const About = () => {
+
+
   return (
     <>
      <Head>
@@ -21,9 +23,7 @@ const About = () => {
         <meta name="robots" content="index, follow"/>
         <meta name="google" content="notranslate"/>
         <meta name="keywords" content="web developer, about Jatin Kumar, programming, web design, front-end development, back-end development, full-stack development, technology, JavaScript, React, Next.js"/>
-        <meta name = "keywords" content = "Jatin Kumar Interactive Web Experiences, Jatin Kumar User-friendly Web Development, Jatin Kumar Digital Solutions, Jatin Kumar Web Innovations, Jatin Kumar AlmaBetter Developer, Jatin Kumar GitHub, Jatin Kumar LinkedIn, Jatin Kumar Web Technologies, Jatin Kumar Frontend Frameworks, Jatin Kumar Server-side Technologies, Jatin Kumar Dynamic Web Systems, Jatin Kumar Web Applications, Jatin Kumar Responsive Design, Jatin Kumar Fast Load Times, Jatin Kumar SEO Optimization, Jatin Kumar High-Quality Content, Jatin Kumar Web Development Blog, Jatin Kumar Tech Blog, Jatin Kumar Developer Blog, Jatin Kumar Web Developer Skills, Jatin Kumar Code Examples, Jatin Kumar Coding Tutorials, Jatin Kumar Web Development Tips, Jatin Kumar Coding Challenges, Jatin Kumar Tech Community, Jatin Kumar Open Source Projects, Jatin Kumar Professional Web Developer, Jatin Kumar Career in Web Development, Jatin Kumar Web Developer Journey, Jatin Kumar Web Developer Tools, Jatin Kumar Developer Resources, Jatin Kumar Web Developer Portfolio, Jatin Kumar Personal Projects, Jatin Kumar Developer Experience, Jatin Kumar Coding Projects, Jatin Kumar Technical Portfolio,  Jatin Kumar Caching Strategies, Jatin Kumar Data Migration, Jatin Kumar Backup and Restore, Jatin Kumar Data Security, Jatin Kumar Encryption, Jatin Kumar Secure Coding, Jatin Kumar Threat Modeling, Jatin Kumar Vulnerability Management, Jatin Kumar Penetration Testing, Jatin Kumar Incident Response, Jatin Kumar Compliance and Regulations, Jatin Kumar GDPR, Jatin Kumar CCPA, Jatin Kumar Web Development Standards, Jatin Kumar Code Quality, Jatin Kumar Testing Frameworks, Jatin Kumar Unit Testing, Jatin Kumar Integration Testing, Jatin Kumar End-to-End Testing, Jatin Kumar Test Automation, Jatin Kumar Test-Driven Development"/>
-        <meta name="keywords" content="Jatin Kumar JavaScript Expert, Jatin Kumar Modern Web Development, Jatin Kumar Innovative Web Solutions, Jatin Kumar Efficient Web Development, Jatin Kumar Scalable Web Solutions, Jatin Kumar Next.js Developer, Jatin Kumar Frontend Skills, Jatin Kumar Backend Skills, Jatin Kumar DevOps Skills, Jatin Kumar MERN Projects, Jatin Kumar Development Pipeline, Jatin Kumar Automated Deployment, Jatin Kumar Web Development Lifecycle, Jatin Kumar Continuous Integration, Jatin Kumar Continuous Delivery, Jatin Kumar Agile Development, Jatin Kumar Sprint Planning, Jatin Kumar Code Review, Jatin Kumar Pair Programming, Jatin Kumar Software Engineering, Jatin Kumar System Design, Jatin Kumar API Development, Jatin Kumar Microservices, Jatin Kumar Web Security, Jatin Kumar Authentication and Authorization, Jatin Kumar Web Performance Optimization, Jatin Kumar Cross-Browser Compatibility, Jatin Kumar Web Accessibility, Jatin Kumar Progressive Web Apps, Jatin Kumar Serverless Architecture, Jatin Kumar Cloud Services, Jatin Kumar DevOps Best Practices, Jatin Kumar Infrastructure as Code, Jatin Kumar Monitoring and Logging, Jatin Kumar Containerization, Jatin Kumar Orchestration, Jatin Kumar Kubernetes, Jatin Kumar Helm Charts, Jatin Kumar Cloud Native Applications, Jatin Kumar Continuous Testing, Jatin Kumar Deployment Strategies, Jatin Kumar Rollback Mechanisms, Jatin Kumar High Availability, Jatin Kumar Fault Tolerance, Jatin Kumar Disaster Recovery, Jatin Kumar Load Balancing, Jatin Kumar Scalability, Jatin Kumar Web Analytics, Jatin Kumar User Experience, Jatin Kumar User Interface Design, Jatin Kumar Frontend Optimization, Jatin Kumar Backend Optimization, Jatin Kumar Data Modeling, Jatin Kumar Database Optimization, Jatin Kumar Schema Design, Jatin Kumar Query Optimization, Jatin Kumar Indexing Strategies," />
-        <meta name="keywords" content=" Jatin Kumar CI/CD, Jatin Kumar Cloud Computing, Jatin Kumar Full Stack Projects,  Jatin Kumar Behavior-Driven Development, Jatin Kumar Debugging, Jatin Kumar Performance Profiling, Jatin Kumar Memory Management, Jatin Kumar Concurrency, Jatin Kumar Multithreading, Jatin Kumar Asynchronous Programming, Jatin Kumar Event-Driven Architecture, Jatin Kumar Real-Time Systems, Jatin Kumar WebSockets, Jatin Kumar RESTful APIs, Jatin Kumar GraphQL, Jatin Kumar RPC, Jatin Kumar Webhooks, Jatin Kumar API Gateway, Jatin Parjapat Full Stack Web Developer, Jatin Parjapat Frontend Developer, Jatin Parjapat ReactJS Developer, Jatin Parjapat Backend Developer, Jatin Parjapat DevOps Engineer, Jatin Parjapat MERN Stack Developer, Jatin Parjapat HTML CSS JavaScript, Jatin Parjapat Node.js Developer, Jatin Parjapat Express.js Developer, Jatin Parjapat MongoDB Developer, Jatin Parjapat MariaDB Developer, Jatin Parjapat AlmaBetter Student, Jatin Parjapat Portfolio, Jatin Parjapat Projects, Jatin Parjapat Web Development, Jatin Parjapat Tech Skills, Jatin Parjapat Flipkart Clone, Jatin Parjapat Shaza Music Clone, Jatin Parjapat Quiz App, Jatin Parjapat Entertainment App, Jatin Parjapat Docker, Jatin Parjapat Jenkins, Jatin Parjapat CI/CD, Jatin Parjapat Cloud Computing, Jatin Parjapat Full Stack Projects, Jatin Parjapat Interactive Web Experiences, Jatin Parjapat User-friendly Web Development, Jatin Parjapat Digital Solutions, Jatin Parjapat Web Innovations, Jatin Parjapat AlmaBetter Developer, Jatin Parjapat GitHub, Jatin Parjapat LinkedIn, Jatin Parjapat Web Technologies, Jatin Parjapat Frontend Frameworks, Jatin Parjapat Server-side Technologies, Jatin Parjapat Dynamic Web Systems, Jatin Parjapat Web Applications, Jatin Parjapat Responsive Design, Jatin Parjapat Fast Load Times, Jatin Parjapat SEO Optimization," />
+        <meta name="keywords" content="Jatin Kumar, Web Developer, Full Stack Developer, Next.js Developer, React, Node.js, MERN Stack, Frontend Developer, Backend Developer, AI Integrations, WebRTC, FastAPI" />
         <meta name="keywords" content="Jatin Parjapat Professional Web Developer, Jatin Parjapat Career in Web Development, Jatin Parjapat Web Developer Journey, Jatin Parjapat Web Developer Tools, Jatin Parjapat Developer Resources, Jatin Parjapat Web Developer Portfolio, Jatin Parjapat Personal Projects, Jatin Parjapat Developer Experience, Jatin Parjapat Coding Projects, Jatin Parjapat Technical Portfolio, Jatin Parjapat JavaScript Expert, Jatin Parjapat Modern Web Development, Jatin Parjapat Innovative Web Solutions, Jatin Parjapat Efficient Web Development, Jatin Parjapat Scalable Web Solutions, Jatin Parjapat Next.js Developer, Jatin Parjapat Frontend Skills, Jatin Parjapat Backend Skills, Jatin Parjapat DevOps Skills, Jatin Parjapat MERN Projects, Jatin Parjapat Development Pipeline, Jatin Parjapat Automated Deployment, Jatin Parjapat Web Development Lifecycle, Jatin Parjapat Continuous Integration, Jatin Parjapat Continuous Delivery, Jatin Parjapat Agile Development, Jatin Parjapat Sprint Planning, Jatin Parjapat Code Review, Jatin Parjapat Pair Programming, Jatin Parjapat Software Engineering, Jatin Parjapat System Design, Jatin Parjapat API Development, Jatin Parjapat Microservices, Jatin Parjapat Web Security, Jatin Parjapat Authentication and Authorization, Jatin Parjapat Web Performance Optimization, Jatin Parjapat Cross-Browser Compatibility, Jatin Parjapat Web Accessibility, Jatin Parjapat Progressive Web Apps, Jatin Parjapat Serverless Architecture, Jatin Parjapat Cloud Services, Jatin Parjapat DevOps Best Practices, Jatin Parjapat Infrastructure as Code, Jatin Parjapat Monitoring and Logging, Jatin Parjapat Containerization," />
         <meta
           name="keywords" 
@@ -106,55 +106,64 @@ const About = () => {
         <meta property="og:audio" content="https://youtube.com/shorts/FozUsUsdTzQ?feature=share"/>
         <meta property="og:audio:type" content="audio/mpeg"/>
       </Head>
-    <section id='About' className="">
-    <div className=" relative mx-auto flex lg:gap-3 px-5 py-24 flex-col lg:flex-row items-center justify-center">
-  <div
-    className="absolute inset-0 bg-cover bg-center opacity-20"
-    style={{ backgroundImage: `url(${aboutb.src})` }}
-  />
-  <div className="relative z-10 flex flex-col lg:flex-row items-center justify-center">
-    <Image
-      width={200}
-      height={150}
-      className="md:w-[40%] hover:shadow-2xl cursor-pointer hover:shadow-blue-600 w-[60%] md:h-[70%] mb-10 rounded"
-      alt="hero"
-      src={aboutMe}
-    />
-    <div className="text-center w-full">
-      <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
-        Full Stack Web Developer
-      </h1>
-      <div className="mb-8 text-base md:text-xl leading-relaxed w-full">
-        <p className="my-4 font-mono">
-          Hello! I'm Jatin, a dedicated 21-year-old full-stack web developer and currently working at <Link href={"http://tallento.ai"} title ='Tallent.ai' > Tallent.ai</Link>, specializing in the MERN stack. My expertise includes a strong foundation in <span className="border-b-4 mx-1 border-blue-500 cursor-pointer hover:shadow-2xl hover:shadow-blue-700" title="HTML">HTML</span>, <span className="border-b-4 mx-1 border-blue-500 cursor-pointer hover:shadow-2xl hover:shadow-blue-700" title="CSS">CSS</span>, and <span className="border-b-4 mx-1 border-blue-500 cursor-pointer hover:shadow-2xl hover:shadow-blue-700" title="JavaScript">JavaScript</span>, complemented by advanced skills in frameworks such as <span className="border-b-4 mx-1 border-blue-500 cursor-pointer hover:shadow-2xl hover:shadow-blue-700" title="React Js">React Js</span>,<span className="border-b-4 mx-1 border-blue-500 cursor-pointer hover:shadow-2xl hover:shadow-blue-700" title="TypeScript">TypeScript</span> and <span className="border-b-4 mx-1 border-blue-500 cursor-pointer hover:shadow-2xl hover:shadow-blue-700" title="Next Js">Next.js</span>, as well as server-side technologies like <span className="border-b-4 mx-1 border-blue-500 cursor-pointer hover:shadow-2xl hover:shadow-blue-700" title="Node Js">Node.js</span> and <span className="border-b-4 mx-1 border-blue-500 cursor-pointer hover:shadow-2xl hover:shadow-blue-700" title="Express JS">Express Js</span>.
-          <br />
-          In addition to my proficiency in these technologies, I am experienced in database management with both <span className="border-b-4 mx-1 border-blue-500 cursor-pointer hover:shadow-2xl hover:shadow-blue-700" title="MongoDB">MongoDB</span> and <span className="border-b-4 mx-1 border-blue-500 cursor-pointer hover:shadow-2xl hover:shadow-blue-700" title="MariaDB">MariaDB</span>. My development journey includes the creation of several impactful projects, such as a dynamic <Link title='Batch System' href="https://batch-system-smoky.vercel.app/" className="border-b-4 border-slate-600 mx-1 font-medium">Batch System</Link> and an <Link href="https://my-quiz-app-beta.vercel.app/" title='engaging Quiz App' className="border-b-4 border-slate-600 mx-1 font-medium">engaging Quiz App</Link>. These projects not only demonstrate my technical abilities but also highlight my commitment to delivering interactive and user-friendly web experiences.
-          <br />
-          Beyond these projects, I have also worked on a variety of applications, including a <span>Flipkart clone</span>, <Link title='Shaza music clone' href="https://shazam-music-app-redux-toolkit.vercel.app/" className="border-b-4 border-slate-600 mx-1 font-medium">Shaza music clone</Link>, <Link title='a quiz application' href="https://my-quiz-app-beta.vercel.app/" className="border-b-4 border-slate-600 mx-1 font-medium">a quiz application</Link>, and <Link title='an entertainment app' href="https://entertainment-frontend-one.vercel.app/" className="border-b-4 border-slate-600 mx-1 font-medium">an entertainment app</Link>. My technical toolkit extends to <span className="border-b-4 mx-1 border-blue-500 cursor-pointer hover:shadow-2xl hover:shadow-blue-700" title="DevOps">DevOps</span> knowledge with experience in <span className="border-b-4 mx-1 border-blue-500 cursor-pointer hover:shadow-2xl hover:shadow-blue-700" title="Jenkins And Docker">Jenkins and Docker</span>, further enhancing my ability to build, deploy, and manage applications efficiently.
-          <br />
-          Join me as I continue to explore and innovate in the ever-evolving field of web development, striving to push the boundaries of what’s possible and deliver exceptional digital solutions.
-        </p>
-      </div>
-      <div className="flex flex-wrap justify-center space-x-4 md:space-x-2">
-        <Link title='Projects' href="/Routes/Projects" className="inline-flex mb-2 text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:shadow-indigo-600 hover:shadow-2xl rounded text-lg">
-          <WorkHistoryIcon className="mr-2" />Projects
-        </Link>
-        <Link title='Resume' href="/Routes/Resume" className="inline-flex mb-2 text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:shadow-blue-600 hover:shadow-2xl rounded text-lg">
-          <FileOpenIcon className="mr-2" />Resume
-        </Link>
-        <Link title='Skills' href="/Routes/Skills" className="inline-flex mb-2 text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:shadow-green-600 hover:shadow-2xl rounded text-lg">
-          <PsychologyIcon className="mr-2" />Skills
-        </Link>
-        <Link title='Contect' href="/Routes/Contact" className="ml-4 mb-2 inline-flex text-gray-700 bg-yellow-400 border-0 py-2 px-6 focus:outline-none hover:shadow-gray-600 hover:shadow-2xl rounded text-lg">
-          <ContactMailIcon className="mr-2" />Contact
-        </Link>
-      </div>
-    </div>
-  </div>
-</div>
+    <section id='About' className="w-full py-24 bg-slate-900/50">
+      <div className="container mx-auto px-5 lg:px-20 flex flex-col lg:flex-row items-center justify-between gap-12">
+        {/* Left Side: Image */}
+        <div className="w-full lg:w-5/12 flex justify-center relative">
+          <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/20 to-indigo-500/20 rounded-2xl transform rotate-3 scale-105 blur-lg"></div>
+          <Image
+            width={400}
+            height={400}
+            className="w-full max-w-[350px] object-cover rounded-2xl shadow-2xl relative z-10 border border-slate-700/50"
+            alt="Jatin Kumar"
+            src={aboutMe}
+          />
+        </div>
 
+        {/* Right Side: Content */}
+        <div className="w-full lg:w-7/12 text-left">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
+            Full Stack <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-500">Developer</span>
+          </h1>
+          <div className="mb-8 text-base md:text-lg leading-relaxed text-slate-300 space-y-6">
+            <p>
+              Hello! I'm Jatin, a Full Stack Developer with 2+ years of professional experience. I am currently working at <Link href={"http://tallento.ai"} title='Tallent.ai' className="text-cyan-400 hover:underline">Tallent.ai</Link>, specializing in building scalable enterprise systems using the MERN stack.
+            </p>
+            <p>
+              My expertise includes a strong foundation in frontend architectures and server-side technologies. I build robust solutions using modern tools:
+            </p>
+            <div className="flex flex-wrap gap-2 mt-2 mb-4">
+              {['HTML5', 'CSS3', 'JavaScript', 'React Js', 'TypeScript', 'Next.js', 'Node.js', 'FastAPI', 'MongoDB', 'PostgreSQL', 'MariaDB'].map((skill) => (
+                <span key={skill} className="px-3 py-1 bg-slate-800 text-cyan-300 text-sm rounded-full border border-slate-700 hover:border-cyan-400 hover:shadow-[0_0_10px_rgba(34,211,238,0.2)] transition-all cursor-default">
+                  {skill}
+                </span>
+              ))}
+            </div>
+            <p>
+              My development journey includes architecting complex, scalable real-time systems such as the <Link href="https://panha-official-hzuc.vercel.app/" className="text-indigo-400 hover:underline font-medium">PANHA Real-Time Communication Platform</Link> and the <Link href="https://tallento.ai" className="text-indigo-400 hover:underline font-medium">AI-Powered Interview Dashboard</Link>. I've also built an Enterprise Multi-Step Registration System and an Automated Resume Parsing System.
+            </p>
+            <p>
+              My technical toolkit extends to DevOps knowledge with experience in <span className="text-white font-medium">Docker</span>, <span className="text-white font-medium">AWS</span>, and <span className="text-white font-medium">WebRTC</span>, enhancing my ability to build, deploy, and manage distributed applications efficiently.
+            </p>
+          </div>
 
-</section>
+          <div className="flex flex-wrap gap-4 mt-8">
+            <Link title='Projects' href="/Routes/Projects" className="flex items-center px-6 py-3 bg-cyan-500 text-slate-900 font-semibold rounded-lg hover:bg-cyan-400 hover:shadow-[0_0_15px_rgba(34,211,238,0.4)] transition-all">
+              <WorkHistoryIcon className="mr-2" /> Projects
+            </Link>
+            <Link title='Resume' href="/Routes/Resume" className="flex items-center px-6 py-3 bg-slate-800 text-white font-medium rounded-lg border border-slate-700 hover:border-indigo-400 hover:shadow-[0_0_15px_rgba(99,102,241,0.3)] transition-all">
+              <FileOpenIcon className="mr-2" /> Resume
+            </Link>
+            <Link title='Skills' href="/Routes/Skills" className="flex items-center px-6 py-3 bg-slate-800 text-white font-medium rounded-lg border border-slate-700 hover:border-indigo-400 hover:shadow-[0_0_15px_rgba(99,102,241,0.3)] transition-all">
+              <PsychologyIcon className="mr-2" /> Skills
+            </Link>
+            <Link title='Contact' href="/Routes/Contact" className="flex items-center px-6 py-3 bg-slate-800 text-white font-medium rounded-lg border border-slate-700 hover:border-indigo-400 hover:shadow-[0_0_15px_rgba(99,102,241,0.3)] transition-all">
+              <ContactMailIcon className="mr-2" /> Contact
+            </Link>
+          </div>
+        </div>
+      </div>
+    </section>
     </>
   )
 }

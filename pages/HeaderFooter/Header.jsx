@@ -32,7 +32,7 @@ const NavItem = ({ to, title, children, onClick }) => {
         spy={true}
         smooth={true}
         onClick={handleClick}
-        className="hover:text-blue-300 hover:border-b-2 hover:border-blue-600 hover:shadow-2xl hover:shadow-blue-500/50 cursor-pointer"
+        className="hover:text-cyan-400 hover:border-b-2 hover:border-cyan-400 transition-colors duration-300 cursor-pointer"
       >
         {children}
       </ScrollLink>
@@ -44,7 +44,7 @@ const NavItem = ({ to, title, children, onClick }) => {
       title={title}
       href={`/#${to}`}
       onClick={handleClick}
-      className="hover:text-blue-300 hover:border-b-2 hover:border-blue-600 hover:shadow-2xl hover:shadow-blue-500/50"
+      className="hover:text-cyan-400 hover:border-b-2 hover:border-cyan-400 transition-colors duration-300"
     >
       {children}
     </NextLink>
@@ -88,7 +88,7 @@ function Header() {
   };
 
   return (
-    <header className={`py-5 rounded-md z-30 shadow-2xl fixed w-full transition-colors duration-300 ${scrolled ? "bg-[#06043E]" : "bg-transparent"}`}>
+    <header className={`py-4 z-30 fixed w-full transition-all duration-300 ${scrolled ? "bg-slate-900/80 backdrop-blur-md border-b border-slate-800 shadow-xl" : "bg-transparent"}`}>
       <nav>
         <div className="flex md:place-content-around place-content-between mx-6">
           <ScrollLink
@@ -99,7 +99,7 @@ function Header() {
             offset={-70}
             duration={500}
             onClick={handleLogoClick} // ✅ log logo click
-            className="py-2 cursor-pointer px-4 border-2 hover:border-blue-600 hover:shadow-2xl hover:shadow-blue-500/50"
+            className="py-2 cursor-pointer px-4 border border-slate-700 rounded-md hover:border-cyan-400 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] transition-all"
           >
             <span className="font-semibold">
               {"<"}
@@ -139,7 +139,7 @@ function Header() {
               title="Resume"
               href="/Routes/Resume"
               onClick={handleResumePageClick}
-              className="hover:text-blue-300 hover:border-b-2 hover:border-blue-600 hover:shadow-2xl hover:shadow-blue-500/50"
+              className="hover:text-cyan-400 hover:border-b-2 hover:border-cyan-400 transition-colors duration-300"
             >
               Resume
             </NextLink>
@@ -150,7 +150,7 @@ function Header() {
             title="Download Resume"
             href={resume}
             onClick={handleResumeDownload}
-            className="rounded-full hidden md:flex items-center bg-blue-500 hover:border-blue-600 hover:shadow-2xl hover:shadow-blue-600 px-4 cursor-pointer"
+            className="rounded-full hidden md:flex items-center bg-cyan-500 text-slate-900 font-semibold hover:bg-cyan-400 hover:shadow-[0_0_20px_rgba(34,211,238,0.5)] transition-all px-6 py-2 cursor-pointer"
           >
             <button>Download</button>
           </NextLink>
@@ -168,7 +168,7 @@ function Header() {
               changeHamburgar();
               handleResumePageClick();
             }}
-            className="hover:text-blue-300 hover:border-b-2 outline-gray-100"
+            className="hover:text-cyan-400 hover:border-b-2 outline-gray-100"
           >
             Resume
           </NextLink>

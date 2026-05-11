@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Head from 'next/head'
 import { event as gaEvent } from "@/lib/gtag";
 import Script from "next/script";
-import { useGetPostsQuery } from '../features/api/apiSlice';
+import { useGetPostsQuery } from '@/features/api/apiSlice';
 const Portfolio = () => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -159,13 +159,18 @@ const Portfolio = () => {
             label: items.title,
           })
         } > 
-        <div  className={`first px-5 py-4 hover:shadow-2xl ${index=== 4 ? "lg:-mt-10":""} hover:shadow-indigo-700 w-auto  h-auto mx-4 rounded-xl my-4  md:max-w-64 bg-[#151347]`} >
-        <div className="image h-auto w-auto  rounded-lg "><Image alt='project' width={200} height={200} className='object-cover rounded-lg h-full w-full  ' src={items.image} /></div>
-        <div className="heading flex my-4 justify-center font-medium text-2xl ">{items.title}</div>
-        <div className="desc">
-      {items.Description}
+        <div className={`first p-5 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(99,102,241,0.5)] ${index === 4 ? "lg:-mt-10" : ""} w-full sm:w-auto h-auto mx-2 md:mx-4 rounded-2xl my-4 md:max-w-[300px] bg-slate-800/80 backdrop-blur-md border border-slate-700/50 group`}>
+          <div className="image h-48 w-full overflow-hidden rounded-xl relative shadow-inner">
+            <Image alt={items.title} width={300} height={200} className="object-cover h-full w-full group-hover:scale-110 transition-transform duration-500" src={items.image} />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+              <span className="text-cyan-400 font-semibold text-sm">View Project &rarr;</span>
+            </div>
+          </div>
+          <div className="heading flex mt-5 mb-2 justify-start font-bold text-xl text-white group-hover:text-indigo-400 transition-colors line-clamp-1">{items.title}</div>
+          <div className="desc text-slate-400 text-sm line-clamp-3 leading-relaxed">
+            {items.Description}
+          </div>
         </div>
-      </div>
         </Link>
       ))}
       

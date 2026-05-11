@@ -2,10 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  color: whitesmoke;
-  background-color: #06043E;
-  /* background-image: url("../public/aboutMe.jpg"); */
+  color: #f8fafc; /* text-slate-50 */
+  background-color: #0f172a; /* bg-slate-900 */
+  background-image: radial-gradient(circle at top, #1e293b 0%, #0f172a 100%);
+  background-attachment: fixed;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: rgba(34, 211, 238, 0.3); /* cyan-400/30 */
+  color: #cffafe; /* cyan-100 */
+}
+
+/* Custom modern scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
 }
 
 /* Custom CSS for hiding the scrollbar */

@@ -1,44 +1,30 @@
 [
  {
-    "id":1231230,
-    "title" : "Instant Song Recognition and Discovery",
-    "Description" : "Shazam Music Application: An intuitive and powerful app designed for music enthusiasts, enabling quick identification of songs playing around you. With real-time music recognition, it provides detailed artist information, track details, and seamless integration with your music library, enhancing your overall music discovery and listening experience effortlessly",
-    "image" : "/shazam.png",
-    "liveLink": "https://shazam-music-app-redux-toolkit.vercel.app"
-},
-{
-    "id":1231231,
-    "title" : "Your Ultimate Hub for Fun",
-    "Description" : "An all-in-one entertainment app designed to keep you engaged and amused. Stream movies, watch TV shows, play games, and access the latest news and music. Experience seamless navigation, personalized recommendations, and high-quality content, making your leisure time more enjoyable and exciting.",
-    "image" : "/entertainmet.png",
-    "liveLink":"https://entertainment-frontend-one.vercel.app/"
-},
-{
-    "id":1231232,
-    "title" : "Your Premier Online Shopping Experience",
-    "Description" : "A comprehensive e-commerce platform replicating the features of Flipkart, offering a wide range of products including electronics, fashion, and home goods. Enjoy user-friendly navigation, secure payment options, personalized recommendations, and seamless shopping from the comfort of your home, ensuring a satisfying and efficient online shopping experience.",
-    "image" : "/flipkart.png",
-    "liveLink":"https://flipkar-clone-three.vercel.app/"
-},
-{
-    "id":1231233,
-    "title" : "Your Reliable Weather Companion",
-    "Description" : "An intuitive weather application providing real-time forecasts, current conditions, and severe weather alerts. With user-friendly navigation and accurate data, it offers hourly, daily, and weekly updates, ensuring you're always prepared for any weather. Personalize your experience with customizable settings for your location and weather preferences.",
-    "image" : "/weather.png",
-    "liveLink":"https://weather-forecast-app-jade.vercel.app/"
-},
-{
-    "id":1231234,
-    "title" : "Engaging and Educational Quiz Platform",
-    "Description" : "An interactive quiz application designed to make learning fun and engaging. With a wide variety of topics and customizable quiz options, users can test their knowledge and challenge friends. Featuring real-time scoring, detailed feedback, and a user-friendly interface, MyQuiz App enhances the educational experience for all ages.",
-    "image" : "/quiz.png",
-    "liveLink":"https://my-quiz-app-beta.vercel.app/"
-},
-{
-    "id":1231235,
-    "title" : "Efficient Subscriber Management",
-    "Description" : "A robust backend system designed to manage and analyze YouTube subscribers. This platform offers real-time subscriber tracking, detailed analytics, and user insights. With secure data handling and seamless integration with YouTube APIs, it helps content creators understand their audience better and grow their channels effectively.",
-    "image" : "/youtube.png",
-    "liveLink":"https://getyoutubesubscriber-mx8d.onrender.com"
-}
+    "id": 1231240,
+    "title": "PANHA Real-Time Communication Platform",
+    "Description": "An enterprise-grade real-time video conferencing and chat application. Architected with WebRTC for low-latency P2P video streaming and WebSockets for instantaneous messaging. Features include scalable room management, robust state handling, and a highly responsive, modern dark-mode UI ensuring a seamless, high-performance user experience.",
+    "image": "/panha.png",
+    "liveLink": "https://panha-official-hzuc.vercel.app/"
+ },
+ {
+    "id": 1231241,
+    "title": "AI-Powered Interview Insights Dashboard",
+    "Description": "A sophisticated recruitment intelligence tool that analyzes candidate interviews to generate automated, actionable feedback. Engineered utilizing large language models (LLMs) and a robust data pipeline, it features dynamic radar charts, real-time performance metrics, and detailed candidate summaries wrapped in a sleek, accessible dashboard interface.",
+    "image": "/ai_feedback.png",
+    "liveLink": "https://tallento.ai"
+ },
+ {
+    "id": 1231242,
+    "title": "Enterprise Multi-Step Registration Workflow",
+    "Description": "A highly scalable, secure B2B onboarding flow designed to streamline complex organizational registrations. Built with advanced form state management, modular validation schemas, and progressive UI/UX patterns. The system ensures high conversion rates by utilizing responsive glassmorphic components and granular error handling.",
+    "image": "/enterprise_reg.png",
+    "liveLink": "https://tallento.ai"
+ },
+ {
+    "id": 1231243,
+    "title": "Automated Resume Parsing System",
+    "Description": "A highly accurate document processing engine that extracts structured data from candidate resumes (PDF/DOCX) using advanced NLP techniques. The application seamlessly integrates the parsed data—such as skills, experience, and education—into an elegant, user-friendly interface, drastically reducing manual data entry for recruiters.",
+    "image": "/resume_parsing.png",
+    "liveLink": "https://tallento.ai"
+ }
 ]

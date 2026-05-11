@@ -113,22 +113,40 @@ const Resume = () => {
         <meta name="twitter:site" content="@yourtwitterhandle"/>
         <meta name="twitter:creator" content="@yourtwitterhandle"/>
       </Head>
-      <div className="">
-        <h1 className="container text-4xl flex pt-20 justify-center">
-          Resume/CV
-        </h1>
-        <div className='  h-auto  mx-auto'>
-          <Worker workerUrl={pdfWorkerUrl}>
-            <Viewer fileUrl={resume} />
-          </Worker>
-        </div>
-        <div className="flex place-content-around py-10  bg-white ">
-          <Link href={resume}>
-      <button className='bg-[#171750] px-4 py-2 text-xl rounded-md hover:shadow-2xl hover:shadow-blue-800  ' title='Download' type="button">Download Resume</button>
-          </Link>
-      <button onClick={printPdf} title='Print' className='bg-[#171750] px-4 py-2 text-xl rounded-md hover:shadow-2xl hover:shadow-blue-800  ' type="button">Print Resume</button>
-      <Link href={"/"} title='Home Page'  className='bg-[#171750] px-4 py-2 text-xl rounded-md hover:shadow-2xl hover:shadow-blue-800  ' type="button">Go Back </Link>
+      <div className="min-h-screen bg-slate-900 py-24 px-5">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-cyan-400 font-mono tracking-widest uppercase mb-4 text-sm">Professional Profile</h2>
+            <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight">Curriculum Vitae</h1>
+          </div>
 
+          <div className="w-full rounded-2xl overflow-hidden border border-slate-700/50 shadow-2xl bg-slate-800 mb-12">
+            <div className="h-[80vh] overflow-y-auto custom-scrollbar">
+              <Worker workerUrl={pdfWorkerUrl}>
+                <Viewer fileUrl={resume} />
+              </Worker>
+            </div>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-4 py-8 border-t border-slate-800">
+            <Link href={resume} target="_blank">
+              <button className="px-8 py-3 bg-cyan-500 text-slate-900 font-bold rounded-xl hover:bg-cyan-400 hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] transition-all" title="Download">
+                Download PDF
+              </button>
+            </Link>
+            <button 
+              onClick={printPdf} 
+              title="Print" 
+              className="px-8 py-3 bg-slate-800 text-white font-semibold rounded-xl border border-slate-700 hover:border-slate-500 transition-all"
+            >
+              Print Resume
+            </button>
+            <Link href="/" title="Home Page">
+              <button className="px-8 py-3 bg-slate-800 text-white font-semibold rounded-xl border border-slate-700 hover:border-slate-500 transition-all">
+                Go Back
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
     </>
