@@ -1,8 +1,8 @@
-// pages/project/[id].js
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-// import Image from 'next/image';
 import Head from 'next/head';
+import path from 'path';
+import fs from 'fs/promises';
 
 
 const ProjectDetail = ({ project }) => {
@@ -87,70 +87,112 @@ const ProjectDetail = ({ project }) => {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
         />
       </Head>
-    <div className="container mx-auto py-24 px-5">
-      <div className="main flex justify-center flex-col">
-      <div className="image shadow-2xl shadow-indigo-700  w-[100%] lg:h-[80vh] h-[100vh] mx-3 rounded-lg ">
-<iframe
-        src={project.liveLink} // Replace with the URL of the live site you want to embed
-        className='h-full overflow-hidden w-full rounded-lg'
-        title="Live Website"
-      />
-</div>
-<div className="container">
-      <h1 className="md:text-4xl text-xl my-10 font-bold mb-8"> {project.title}</h1>
-      <p className="md:text-lg text-sm leading-relaxed mb-4">{project.Description}</p>
-      <div>
-       <ul>
-        <h3 className='text-xl my-2 font-medium ' >Fronted Tech </h3>
-        {project.frontend.map((item, index) => {
-  const techName = item.split(':')[0].trim();
-  const description = item.split(':')[1].trim();
+    <div className="min-h-screen bg-slate-900 py-24 px-5 lg:px-20">
+      <div className="max-w-6xl mx-auto">
+        {/* Browser Mockup Frame */}
+        <div className="w-full rounded-2xl overflow-hidden border border-slate-700/50 shadow-2xl bg-slate-800">
+          {/* Browser Header */}
+          <div className="bg-slate-800/80 px-4 py-3 flex items-center gap-2 border-b border-slate-700/50">
+            <div className="flex gap-1.5">
+              <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
+              <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+              <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
+            </div>
+            <div className="flex-1 max-w-md mx-auto h-6 bg-slate-900/50 rounded flex items-center px-3 text-[10px] text-slate-500 font-mono truncate">
+              {project.liveLink}
+            </div>
+          </div>
+          {/* Iframe Content */}
+          <div className="w-full lg:h-[75vh] h-[50vh] bg-slate-900">
+            <iframe
+              src={project.liveLink}
+              className="w-full h-full border-none"
+              title="Project Preview"
+            />
+          </div>
+        </div>
 
-  return (
-    <li key={index}>
-      <strong>{techName}</strong>: {description}
-    </li>
-  );
-})}
-        </ul>  
+        {/* Project Info Section */}
+        <div className="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-12">
+          {/* Left: Main Content */}
+          <div className="lg:col-span-2 space-y-8">
+            <div>
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
+                {project.title}
+              </h1>
+              <p className="text-lg text-slate-300 leading-relaxed">
+                {project.Description}
+              </p>
+            </div>
 
-        <ul>
-          <h3 className='text-xl my-2 font-medium' >Backend Tech</h3>
-          {project.backend.map((item, index) => {
-  const techName = item.split(':')[0].trim();
-  const description = item.split(':')[1].trim();
+            <div className="flex flex-wrap gap-4 pt-4">
+              <Link
+                href={project.liveLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-3 bg-cyan-500 text-slate-900 font-bold rounded-xl hover:bg-cyan-400 hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] transition-all flex items-center gap-2"
+              >
+                Launch Live Site
+              </Link>
+              <Link
+                href="/"
+                className="px-8 py-3 bg-slate-800 text-white font-semibold rounded-xl border border-slate-700 hover:border-slate-500 transition-all"
+              >
+                Back to Portfolio
+              </Link>
+            </div>
+          </div>
 
-  return (
-    <li key={index}>
-      <strong>{techName}</strong>: {description}
-    </li>
-  );
-})}
-        </ul> 
-        <ul>
-          <h3 className='text-xl my-2 font-medium' >Additonal Tools </h3>
-          {project.additional_Tools.map((item, index) => {
-  const techName = item.split(':')[0].trim();
-  const description = item.split(':')[1].trim();
+          {/* Right: Tech Stack Grid */}
+          <div className="space-y-6">
+            <div className="bg-slate-800/50 border border-slate-700/50 p-6 rounded-2xl backdrop-blur-md">
+              <h3 className="text-cyan-400 font-bold text-sm uppercase tracking-widest mb-4">Frontend Architecture</h3>
+              <ul className="space-y-3">
+                {project.frontend?.map((item, index) => {
+                  const [name, desc] = item.includes(':') ? item.split(':') : [item, ''];
+                  return (
+                    <li key={index} className="text-slate-300 text-sm">
+                      <span className="text-white font-semibold">{name.trim()}</span>
+                      {desc && <span className="text-slate-500">: {desc.trim()}</span>}
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
 
-  return (
-    <li key={index}>
-      <strong>{techName}</strong>: {description}
-    </li>
-  );
-})}
-        </ul> 
-      </div>
-      <div>
+            <div className="bg-slate-800/50 border border-slate-700/50 p-6 rounded-2xl backdrop-blur-md">
+              <h3 className="text-indigo-400 font-bold text-sm uppercase tracking-widest mb-4">Backend Infrastructure</h3>
+              <ul className="space-y-3">
+                {project.backend?.map((item, index) => {
+                  const [name, desc] = item.includes(':') ? item.split(':') : [item, ''];
+                  return (
+                    <li key={index} className="text-slate-300 text-sm">
+                      <span className="text-white font-semibold">{name.trim()}</span>
+                      {desc && <span className="text-slate-500">: {desc.trim()}</span>}
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
 
-      <Link href={project.liveLink} target="_blank"
-    rel="noopener noreferrer" className='bg-blue-700 text-xl px-4 mt-6 rounded-xl py-2 hover:shadow-2xl hover:shadow-indigo-700 ' type="button">Live Link</Link>
-    <Link href={"/"} className='bg-blue-700 text-xl px-4 mt-6 rounded-xl py-2 hover:shadow-2xl mx-4 hover:shadow-indigo-700 '  >Go Back
-    </Link>
-    </div>
-</div>
-
-
+            {project.additional_Tools?.length > 0 && (
+              <div className="bg-slate-800/50 border border-slate-700/50 p-6 rounded-2xl backdrop-blur-md">
+                <h3 className="text-slate-400 font-bold text-sm uppercase tracking-widest mb-4">Core Tools</h3>
+                <ul className="space-y-3">
+                  {project.additional_Tools.map((item, index) => {
+                    const [name, desc] = item.includes(':') ? item.split(':') : [item, ''];
+                    return (
+                      <li key={index} className="text-slate-300 text-sm">
+                        <span className="text-white font-semibold">{name.trim()}</span>
+                        {desc && <span className="text-slate-500">: {desc.trim()}</span>}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            )}
+          </div>
+        </div>
       </div>
     </div>
     </>
@@ -159,21 +201,34 @@ const ProjectDetail = ({ project }) => {
 
 export async function getServerSideProps(context) {
   const { id } = context.params;
-  const fetchProjectById = async (id) => {
-    // Replace this with your actual data fetching logic
-    const response = await fetch(`https://my-portfolio-three-green.vercel.app/api/project/${id}`);
-    const project = await response.json();
-    console.log(project , "from id")
-    return project;
-  };
-  // Fetch the project details using the ID
-  const project = await fetchProjectById(id);
 
-  return {
-    props: {
-      project,
-    },
-  };
+  try {
+    const filePath = path.join(process.cwd(), 'public', 'projects.json');
+    const fileContent = await fs.readFile(filePath, 'utf8');
+    const projects = JSON.parse(fileContent);
+    
+    // Find the project with the matching ID
+    const project = projects.find((p) => p.id === parseInt(id, 10)) || null;
+
+    if (!project) {
+      return {
+        notFound: true,
+      };
+    }
+
+    return {
+      props: {
+        project,
+      },
+    };
+  } catch (error) {
+    console.error('Error in getServerSideProps:', error);
+    return {
+      props: {
+        project: null,
+      },
+    };
+  }
 }
 
 export default ProjectDetail;

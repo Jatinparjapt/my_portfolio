@@ -127,15 +127,15 @@ const Skills = () => {
  <section className="text-gray-600 body-font  drop-shadow-2xl shadow-blue-500/50 ">
   <div className="container px-5 py-24 mx-auto  " >
     <div className="flex flex-col text-center w-full mb-20">
-      <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">Showcasing My Web Development Skills</h1>
-      <p className="lg:w-2/3 mx-auto leading-relaxed text-slate-300 text-base">I am a proficient web developer specializing in both frontend and backend technologies, capable of delivering seamless and engaging web applications. My expertise spans creating responsive, visually appealing web interfaces and developing robust server-side applications and APIs. Additionally, I possess strong DevOps knowledge, ensuring efficient deployment and maintenance of applications. Here are the key skills that define my capabilities --{">"}</p>
+      <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">Engineering Expertise & Technologies</h1>
+      <p className="lg:w-2/3 mx-auto leading-relaxed text-slate-300 text-base">As a Full Stack Developer with 2+ years of professional experience, I architect and deliver high-performance web applications. My expertise spans building scalable systems, developing robust microservices, and implementing modern frontend architectures. I focus on creating efficient, maintainable code and seamless user experiences. Here are the key technologies that power my solutions --{">"}</p>
     </div>
     <div className='scroll-container md:w-[90%] md:mx-auto mt-14 md:py-10 hide-scrollbar'>
   <div className='scrolling-carousel-r'>
     {imageArray2.map((items, index) => ( // Duplicate images for seamless scroll
-      <div className='scroll-item w-full mx-8 flex-shrink-0' key={index}>
-        <Image className=' object-cover hover:scale-105 w-[70px] h-[70px] md:w-[auto] md:h-[90px] ' alt="skills" src={items} width={150} height={100} />
-        <p className='text-white flex md:text-xl text-center ml-2 md:w-auto md:ml-0 mt-3 font-medium md:justify-center' >{imageArray2Name[index]}</p>
+      <div className='scroll-item !w-40 !h-40 mx-6 flex-shrink-0 bg-slate-800/40 backdrop-blur-md border border-slate-700/50 rounded-2xl flex flex-col items-center justify-center p-4 hover:bg-slate-800 hover:border-cyan-500/50 hover:shadow-[0_0_20px_rgba(34,211,238,0.2)] transition-all group' key={index}>
+        <Image className='object-contain w-16 h-16 mb-3 group-hover:scale-110 transition-transform duration-300' alt="skills" src={items} width={64} height={64} />
+        <p className='text-slate-300 text-sm md:text-base text-center font-medium group-hover:text-cyan-400 transition-colors'>{imageArray2Name[index]}</p>
       </div>
     ))}
   </div>
@@ -143,15 +143,15 @@ const Skills = () => {
 <div className='scroll-container md:w-[90%] md:mx-auto md:py-12 mt-8 md:mt-20'>
   <div className='scrolling-carousel'>
     {imageArray.map((item, index) => (
-      <div className='scroll-item mx-8  w-full flex-shrink-0  ' key={index}>
+      <div className='scroll-item !w-40 !h-40 mx-6 flex-shrink-0 bg-slate-800/40 backdrop-blur-md border border-slate-700/50 rounded-2xl flex flex-col items-center justify-center p-4 hover:bg-slate-800 hover:border-indigo-500/50 hover:shadow-[0_0_20px_rgba(99,102,241,0.2)] transition-all group' key={index}>
        <Image
-        className="bg-transparent object-cover hover:scale-105 w-[70px] h-[70px] md:w-[auto] md:h-[90px]  "
+        className="object-contain w-16 h-16 mb-3 group-hover:scale-110 transition-transform duration-300"
         alt="skills"
         src={item}
-        width={150}
-        height={100}
+        width={64}
+        height={64}
       />
-        <p className='text-white flex md:text-xl mr-3 mt-3 md:w-auto font-medium justify-center' >{imageArrayName[index]}</p>
+        <p className='text-slate-300 text-sm md:text-base text-center font-medium group-hover:text-indigo-400 transition-colors'>{imageArrayName[index]}</p>
       </div>
     ))}
   </div>

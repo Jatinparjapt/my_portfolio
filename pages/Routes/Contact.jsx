@@ -101,29 +101,71 @@ const Contect = () => (
         <meta name="twitter:site" content="@yourtwitterhandle"/>
         <meta name="twitter:creator" content="@yourtwitterhandle"/>
       </Head>
-    <section className="body-font md:h-[100vh] h-[80vh] mx-2 flex justify-center ">
-      <div className="container flex flex-col  justify-center items-center ">
-        <div>
-      <h1>Contact With Me</h1>
-
+    <section id="contact" className="min-h-screen flex items-center justify-center py-24 px-4 bg-slate-900">
+      <div className="max-w-4xl w-full flex flex-col items-center">
+        <div className="text-center mb-12">
+          <h2 className="text-cyan-400 font-mono tracking-widest uppercase mb-4 text-sm">Let's build together</h2>
+          <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight">Contact With Me</h1>
         </div>
-        <div  className='md:w-[60%] lg:w-[45%] w-full mt-4 bg-[#171749] md:px-10 rounded-xl py-5 px-4 mx-2 ' >
 
-        <form action="" className='flex flex-col w-full' >
-          <input className='w-full mt-6 px-1 py-2 rounded-lg bg-[#262674] border-b-2 outline-0   ' type="text" placeholder='Enter Your First Name' />
-          <input className='w-full mt-6 px-1 py-2 rounded-lg bg-[#262674] border-b-2 outline-0   ' type="text" placeholder='Enter Your Last Name' />
-          <input className='w-full mt-6 px-1 py-2 rounded-lg bg-[#262674] border-b-2 outline-0   ' type="email" placeholder='Enter Your Email'/>
-          <Link href={"mailto:jatin3961jk@gmail.com?subject=I%20would%20like%20to%20connect%20with%20you&body=I%20need%20help."} title='Connect Through Mail' className='mt-10 bg-blue-600 py-3 md:w-[50%] flex justify-center  md:mx-auto rounded-lg text-xl hover:bg-blue-500 hover:shadow-2xl hover:shadow-blue-700 ' type="button">Connect </Link>
-        </form>
-        <div className='flex flex-wrap place-content-around mt-8' >
-          <Link className='flex items-center ' title='Instagram' href={"https://www.instagram.com/jatin_prajapat_ji/"}><BsInstagram className='mx-1' /> Instagram</Link>
-          <Link className='flex items-center 'title='LinkedIn' href={"https://www.linkedin.com/in/jatin-kumar-ji/"}> <IoLogoLinkedin className='mx-1' /> LinkedIn</Link>
-          <Link className='flex items-center ' title='Github' href={"https://github.com/Jatinparjapt"}> <BsGithub className='mx-1' /> Github</Link>
-          <Link className='flex items-center ' title='YouTube' href={"https://www.youtube.com/@parjapticreator"}> <FaYoutube className='mx-1' /> Youtube</Link>
-        </div>
+        <div className="w-full bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 p-8 md:p-12 rounded-3xl shadow-2xl">
+          <form action="" className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="flex flex-col gap-2">
+              <label className="text-xs font-semibold text-slate-500 uppercase ml-1">First Name</label>
+              <input 
+                className="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-slate-200 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 outline-none transition-all" 
+                type="text" 
+                placeholder="Enter Your First Name" 
+              />
+            </div>
+            <div className="flex flex-col gap-2">
+              <label className="text-xs font-semibold text-slate-500 uppercase ml-1">Last Name</label>
+              <input 
+                className="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-slate-200 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 outline-none transition-all" 
+                type="text" 
+                placeholder="Enter Your Last Name" 
+              />
+            </div>
+            <div className="flex flex-col gap-2 md:col-span-2">
+              <label className="text-xs font-semibold text-slate-500 uppercase ml-1">Email Address</label>
+              <input 
+                className="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-slate-200 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 outline-none transition-all" 
+                type="email" 
+                placeholder="Enter Your Email"
+              />
+            </div>
+            
+            <div className="md:col-span-2 mt-4">
+              <Link 
+                href="mailto:jatin3961jk@gmail.com?subject=I%20would%20like%20to%20connect%20with%20you&body=I%20need%20help." 
+                title='Connect Through Mail' 
+                className="w-full py-4 bg-cyan-500 text-slate-900 font-bold rounded-xl text-center hover:bg-cyan-400 hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] transition-all flex justify-center"
+              >
+                Send Message
+              </Link>
+            </div>
+          </form>
+
+          <div className="flex flex-wrap justify-center gap-6 mt-12 pt-8 border-t border-slate-700/30">
+            {[
+              { name: 'Instagram', icon: <BsInstagram />, href: 'https://www.instagram.com/jatin_prajapat_ji/' },
+              { name: 'LinkedIn', icon: <IoLogoLinkedin />, href: 'https://www.linkedin.com/in/jatin-kumar-ji/' },
+              { name: 'Github', icon: <BsGithub />, href: 'https://github.com/Jatinparjapt' },
+              { name: 'Youtube', icon: <FaYoutube />, href: 'https://www.youtube.com/@parjapticreator' }
+            ].map((social) => (
+              <Link 
+                key={social.name}
+                className="flex items-center gap-2 text-slate-400 hover:text-white transition-colors group" 
+                title={social.name} 
+                href={social.href}
+              >
+                <span className="text-xl group-hover:text-cyan-400 transition-colors">{social.icon}</span>
+                <span className="text-sm font-medium">{social.name}</span>
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
-       
     </section>
   </>
 )
